@@ -23,7 +23,7 @@ Clientes SSH para windows:
     :height: 331px
     :alt: MobaXterm image
     
-MobaXterm es una herramienta para coneccion remota, cuenta con un clientes SSH  y otras caracteristicas adicionales como multi ejecución (ejecutar el mismo codigo en varios servidores a la vez) y compatibilidad con ventanas graficas(X11 forwarding). 
+MobaXterm es una herramienta para coneccion remota, cuenta con un cliente SSH  y otras caracteristicas  como multi ejecución (ejecutar el mismo codigo en varios servidores a la vez) y compatibilidad con ventanas graficas(X11 forwarding). 
 
 
 `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_
