@@ -36,6 +36,112 @@ MobaXterm es una herramienta para coneccion remota, cuenta con un cliente SSH  y
 
 Putty es un cliente SSH que requiere pocos recursos y permite crear llaves SSH, es una alternativa en caso de que el usuario cuente con una maquina con recursos limitados. 
 
-Llaves SSH
-#########
+ Conectarse usando SSH
+################
+
+MacOS y GNU/Linux
+******************
+
+Para conectarse usando MacOS o GNU/Linux , deberá abrír la terminal y escribir el comando *SSH* seguido de * su usuario @ dirección* usando la dirección IP del HPC del CECC como se muestra en la imagen: 
+
+.. image:: /images/linux2.png
+    :width: 600px
+    :align: center
+    :height: 325px
+    :alt: Linux terminal image
+
+Si ha seguido los pasos correctamente, tendá acceso al HPC del CECC.  
+
+Windows
+**********
+**Conectarse usando PuTTY**
+
+
+Una vez abierto el programa aparecerá el siguiente menú:
+
+.. image:: /images/Putty.PNG
+    :width: 452px
+    :align: center
+    :height: 442px
+    :alt: Putty tutorial
  
+
+En este menú deberá ingresar la dirección IP HPC del CECC y seleeciónar el tipo de conexión *SSH*
+
+.. image:: /images/Putty/Putty.PNG
+    :width: 452px
+    :align: center
+    :height: 442px
+    :alt: Putty tutorial
+    
+    
+Una vez de click en *Open*, la primera vez que se conecte a cualquier sevidor aparecerá una ventana como la que se muestra a continuacón (esto es totalmente normal y tiene como objetivo que su computador guarde un identificador para que la proxima vez que usted se trate de conectar al sevidor usando la misma dirección IP su computadora pueda verificar que es el mismo al que se conecto previamente), para continuar solo de click en *Accept*.    
+
+.. image:: /images/Putty/putty3.PNG
+    :width: 611px
+    :align: center
+    :height: 418px
+    :alt: Putty tutorial
+
+
+Ahora saldrá está ventana donde se le pedira que ingresé el usuario y contraseña que el administrador le haya suministrado: 
+
+.. image:: /images/Putty/putty4.PNG
+    :width: 611px
+    :align: center
+    :height: 418px
+    :alt: Putty tutorial
+   
+   
+Si ha seguido los pasos correctamente, tendá acceso al HPC del CECC.    
+
+
+**Conectarse usando MobaXterm:**
+
+Una vez abierto el programa aparecerá el siguiente menú:
+
+.. image:: /images/Moba.png
+    :width: 600px
+    :align: center
+    :height: 331px
+    :alt: MobaXterm tutorial
+
+
+En este menú deberá dar click en el botón de sesiones: 
+
+.. image:: /images/Moba/Moba.PNG
+    :width: 600px
+    :align: center
+    :height: 331px
+    :alt: MobaXterm tutorial
+
+
+Cuando vez oprima dicho botón, aparecerá un menú donde debrá seleccionar el tipo protocolo que desea usar, en este caso deber seleccionar *SSH*: 
+
+.. image:: /images/Moba/Mobases.PNG
+    :width: 600
+    :align: center
+    :height: 402
+    :alt: MobaXterm tutorial
+
+
+Una vez seleccionado SSH, aparecerá un recuadro donde deberá introducir la dirección IP del HPC del CECC
+
+.. image:: /images/Moba/mobases2.PNG
+    :width: 600
+    :align: center
+    :height: 403
+    :alt: MobaXterm tutorial
+ 
+ 
+Despues de haber introducido la dirección IP, saldrá este recuadro donde se le pedira que ingresé el usuario y contraseña que el administrador le haya suministrado: 
+
+.. image:: /images/Moba/mobases4.PNG
+    :width: 600
+    :align: center
+    :height: 334
+    :alt: MobaXterm tutorial
+ 
+
+
+Si ha seguido los pasos correctamente, tendá acceso al HPC del CECC.  
