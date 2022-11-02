@@ -9,7 +9,7 @@ Para acceder( `loguearse <https://es.wikipedia.org/wiki/Login>`_ )  al HPC del `
 
 Instalar un cliente SSH
 ####################
-Si usted posee una computadora con alguna distribución de `GNU/Linux <https://www.gnu.org/home.es.html>`_ o  `MacOS (Antes OSX) <https://www.apple.com/co/macos/monterey/>`_, su sistema operativo ya cuenta con un cliente SSH que puede usar en una  terminar; en caso de usar una computadora con `Windows <https://www.microsoft.com/es-xl/windows>`_ será necesario instalar un cliente SSH
+Si usted usa alguna distribución de `GNU/Linux <https://www.gnu.org/home.es.html>`_ o  `MacOS (Antes OSX) <https://www.apple.com/co/macos/monterey/>`_, su sistema operativo ya cuenta con un cliente SSH que puede usar en una  terminar; en caso de usar una computadora con `Windows <https://www.microsoft.com/es-xl/windows>`_ será necesario instalar un cliente SSH
 
 Clientes SSH para windows:
 ************************
