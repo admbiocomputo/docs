@@ -36,13 +36,11 @@ MobaXterm es una herramienta para coneccion remota, cuenta con un cliente SSH  y
 
 Putty es un cliente SSH que requiere pocos recursos y permite crear llaves SSH, es una alternativa en caso de que el usuario cuente con una maquina con recursos limitados. 
 
- Conectarse usando SSH
-#############
 
 MacOS y GNU/Linux
 ******************
 
-Para conectarse usando MacOS o GNU/Linux , deberá abrír la terminal y escribir el comando *SSH* seguido de * su usuario @ dirección* usando la dirección IP del HPC del CECC como se muestra en la imagen: 
+Para conectarse usando MacOS o GNU/Linux , deberá abrír la terminal y escribir el comando *ssh* seguido de *su usuario @ dirección* usando la dirección IP del HPC del CECC como se muestra en la imagen: 
 
 .. image:: /images/linux2.png
     :width: 600px
