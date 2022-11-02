@@ -3,12 +3,12 @@
 Ingreso
 =======
 Coneccion usando ssh
-####################
+############
 
 Para acceder( `loguearse <https://es.wikipedia.org/wiki/Login>`_ )  al HPC del `CECC <https://cecc.unal.edu.co>`_ usted debe usar `ssh (Secure SHell) <https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-es-4/ch-ssh.html>`_, esta via facilita la comunicacion entre computadoras que usan sistemas operativos GNU/Linux;  para hacer esto used debe tener el software ssh(cliente ssh).  Computadoras con sistema operativo `GNU/Linux <https://www.gnu.org/home.es.html>`_ o MacOS vienen con un cliente ssh de linea de comandos(solo texto).  En windows existen varios clientes con los que puede conectarse.
 
 Instalar un cliente SSH
-####################
+############
 Si usted usa alguna distribución de `GNU/Linux <https://www.gnu.org/home.es.html>`_ o  `MacOS (Antes OSX) <https://www.apple.com/co/macos/monterey/>`_, su sistema operativo ya cuenta con un cliente SSH que puede usar en una  terminar; en caso de usar una computadora con `Windows <https://www.microsoft.com/es-xl/windows>`_ será necesario instalar un cliente SSH
 
 Clientes SSH para windows:
@@ -37,7 +37,7 @@ MobaXterm es una herramienta para coneccion remota, cuenta con un cliente SSH  y
 Putty es un cliente SSH que requiere pocos recursos y permite crear llaves SSH, es una alternativa en caso de que el usuario cuente con una maquina con recursos limitados. 
 
  Conectarse usando SSH
-################
+#############
 
 MacOS y GNU/Linux
 ******************
@@ -53,7 +53,9 @@ Para conectarse usando MacOS o GNU/Linux , deberá abrír la terminal y escribir
 Si ha seguido los pasos correctamente, tendá acceso al HPC del CECC.  
 
 Windows
-**********
+********
+
+
 **Conectarse usando PuTTY**
 
 
