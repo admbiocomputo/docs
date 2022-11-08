@@ -40,9 +40,9 @@ Putty es un cliente SSH que requiere pocos recursos y permite crear llaves SSH, 
 MacOS y GNU/Linux
 ******************
 
-Para conectarse usando MacOS o GNU/Linux , deberá abrír la terminal y escribir el comando *ssh* seguido de *su usuario @ dirección* usando la dirección IP del HPC del CECC como se muestra en la imagen: 
+Para conectarse usando MacOS o GNU/Linux abra una terminal y escriba el comando *ssh* seguido de *su usuario@168.176.8.19* : 
 
-.. image:: /images/linux2.png
+.. image:: images/conect1.png
     :width: 600px
     :align: center
     :height: 325px
