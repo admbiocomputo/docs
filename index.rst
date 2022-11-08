@@ -83,30 +83,3 @@ Cluster Fisica
  
 
   
-
-
-+------------+--------------+-------------+---+--+----+---+--+
-| Header 1   | Header 2   | Header 3  |4   |   5|   6 | 7   | 8 |
-+======+======+======+=+=+==+=+=+
-| row 1 | column 2   | column 3  |4 | 5| 6 | 7 | 8 |
-+------------+--------------+-------------+---+--+----+---+--+
-
-
-
-.. toctree::
-   :maxdepth: -1
-   :hidden:
-   
-  ingreso.rst
-  asociados/index.rst
-  software/index.rst
-  uso/index.rst
-  
-
-
-Indices y tablas
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
