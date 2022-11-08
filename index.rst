@@ -33,11 +33,11 @@ La Federacion de Cluster del CECC usa nodos de inicio de sesión para el acceso 
 Hardware de la Federacion de Clusters del CECC
 ============================
 
-Cluster biocomputo, 
+Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
 *************************************************
 
 
-.. csv-table:: 7Nodos, 120Threads, 334Gb RAM
+.. csv-table:: 7Nodos, 120Threads, 334Gb RAM!
    :header: "nodo", "Hercules1", "Hercules2", "Hercules3", "Hercules4", "Hercules5", "hercules6", "hercules7"
    :widths: 27, 30, 30, 30, 30, 30, 30, 30
 
