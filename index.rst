@@ -33,12 +33,12 @@ La Federacion de Cluster del CECC usa nodos de inicio de sesión para el acceso 
 Hardware de la Federacion de Clusters del CECC
 ============================
 
-Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
-*************************************************
+Cluster biocomputo,
+******************
 
 .. csv-table::  7Nodos, 120Threads, 334Gb RAM 
    :header: "nodo", "Hercules1", "Hercules2", "Hercules3", "Hercules4", "Hercules5", "hercules6", "hercules7"
-   :widths: 27, 30, 30, 30, 30, 30, 30, 30
+   :widths: 25, 27, 30, 30, 30, 30, 30, 30
 
    "Procesador", "Xeon E5620", "Xeon E5620", "Xeon E5620",  "Xeon E5620", "Xeon E5620", "Xeon E5-2609", "Xeon Silver 4208"
    "Slots/Nodo", "2", "2", "2", "2", "2", "2", "2"
