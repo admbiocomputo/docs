@@ -17,7 +17,7 @@ Este sitio contiene la documentacion de la Federacion de clusters del Centro de 
 Obtener Acceso
 =========
 
-El Director del grupo de Investigacion de la Universidad Nacional de Colombia aplicara para un proyecto en `URL <https://cecc.unal.edu.co/solicitud_proyecto />`_  y el sera quien solicite  para usted el ingreso, luego usted  recibira un correo informando su Usuario/Password.
+El Director del grupo de Investigacion de la Universidad Nacional de Colombia aplicara para un proyecto en `URL <https://cecc.unal.edu.co/solicitud_proyecto />`_  y el sera quien solicite  para usted el ingreso, luego de asignados los recursos, usted  recibira un correo informando su Usuario/Password.
 
 .. toctree::
    :maxdepth: -1
