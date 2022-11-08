@@ -30,7 +30,11 @@ El cortafuegos del HPC solo permite conexiones SSH entrantes, ssh o scp del HPC 
 
 La Federacion de Cluster del CECC usa nodos de inicio de sesión para el acceso interactivo y para el envío de trabajos por lotes. 
 
+Hardware de la Federacion de Clusters del CECC
+============================
 
+Cluster: biocomputo
+******************
 
 .. toctree::
    :maxdepth: -1
