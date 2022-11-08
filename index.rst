@@ -82,7 +82,7 @@ Cluster qTeorica,
 +------------+--------------+-------------+---+--+----+---+--+
 
 
-.. flat-table:: Characteristics of the BLE badge
+. flat-table:: Characteristics of the BLE badge
    :header-rows: 1
 
    * - Service
@@ -98,11 +98,6 @@ Cluster qTeorica,
    * - 0xfee0
      - 0xfee1
      - NOTIFY, READ, WRITE
-   * - 0xfee0
-     - 0xfee1
-     - NOTIFY, READ, WRITE
-     
-
 
 .. toctree::
    :maxdepth: -1
