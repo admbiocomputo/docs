@@ -36,11 +36,12 @@ Hardware de la Federacion de Clusters del CECC
 Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
 *************************************************
 
-
 +------------+------------+-----------+
-| Nodo   | Hercules1   | Header 2  |
+| Header 1   | Header 2   | Header 3  |
 +============+============+===========+
-| Procesador |   Xeon E5620 | Xeon E5620  |
+| body row 1 | column 2   | column 3  |
++------------+------------+-----------+
+| body row 2 | Cells may span columns.|
 +------------+------------+-----------+
 
 +------+------------+--------------+-------------+------------+--------------+--------------+-----------+
