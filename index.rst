@@ -50,7 +50,7 @@ Cluster biocomputo
    
 			
 Cluster qTeorica
-***************						
+**************						
 
 .. csv-table::  1Nodos, 32Threads, 62Gb RAM 
    :header: "nodo", "egeo16"
@@ -65,7 +65,7 @@ Cluster qTeorica
    "RAM/Nodo", "62Gb\@0.4 ns"
 
  Cluster Fisica
-***************						
+************						
 
 .. csv-table::  1Nodos, 32Threads, 256Gb RAM 
    :header: "nodo", "Irlande"
