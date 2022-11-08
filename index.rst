@@ -52,10 +52,9 @@ Cluster biocomputo
 Cluster qTeorica
 **************						
 
-.. csv-table::  1Nodos, 32Threads, 62Gb RAM 
+.. csv-table::  1Nodos, 120Threads, 62Gb RAM 
    :header: "nodo", "egeo16"
-   :widths: 18, 18
-
+   :widths: 18, 18 
    "Procesador", "Xeon Silver 4208"
    "Slots/Nodo", "2"
    "Cores/Nodo", "16"
