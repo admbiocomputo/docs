@@ -36,7 +36,7 @@ Hardware de la Federacion de Clusters del CECC
 Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
 *************************************************
 
-+============+============+===========+
++======+====+========+
 | body row 1 | column 2   | column 3  |
 +------------+------------+-----------+
 | Header 1   | Header 2   | Header 3  |
