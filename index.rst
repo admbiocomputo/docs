@@ -64,6 +64,21 @@ Cluster qTeorica
    "Velocidad Turbo", "3,20 GHz" 
    "RAM/Nodo", "62Gb\@0.4 ns"
 
+ Cluster Fisica
+***************						
+
+.. csv-table::  1Nodos, 32Threads, 62Gb RAM 
+   :header: "nodo", "Irlande"
+   :widths: 18, 18
+
+   "Procesador", "AMD 8356"
+   "Slots/Nodo", "8"
+   "Cores/Nodo", "4"
+   "Threads/Nodo", "32"
+   "Velocidad Base", "2,3 GHz"
+   "Velocidad Turbo", "3,0 GHz" 
+   "RAM/Nodo", "256Gb\@1.9 ns"
+
  
    
    
