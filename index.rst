@@ -86,8 +86,8 @@ Cluster qTeorica,
    :header: "nodo", "Hercules1", "Hercules2", "Hercules3", "Hercules4", "Hercules5", "hercules6", "hercules7"
    :widths: 30, 30, 30, 30, 30, 30, 30, 30
 
-   "nodo", "Hercules1", "Hercules2", "Hercules3", "Hercules4", "Hercules5", "hercules6", "hercules7"
-   
+   "Procesador", "Xeon E5620", "Xeon E5620", "Xeon E5620",  "Xeon E5620", "Xeon E5620", "Xeon E5-2609", "Xeon Silver 4208"
+
 
  
 
