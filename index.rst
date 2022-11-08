@@ -47,7 +47,7 @@ Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
    "Gannet Ripple", 1.99, "On a stick!"
 
 
-.. csv-table:: Nodos!
+.. csv-table:: Frozen Delights!
    :header: "nodo", "Hercules1", "Hercules2", "Hercules3", "Hercules4", "Hercules5", "hercules6", "hercules7"
    :widths: 27, 30, 30, 30, 30, 30, 30, 30
 
