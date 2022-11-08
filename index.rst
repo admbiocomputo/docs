@@ -36,6 +36,26 @@ Hardware de la Federacion de Clusters del CECC
 Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
 *************************************************
 
+.. list-table:: Input and output capabilities
+   :header-rows: 1
+   :stub-columns: 1
+
+   * -
+     - No output
+     - Numeric output
+   * - No input
+     - NoInputNoOutput
+     - DisplayOnly
+   * - Yes/No
+     - NoInputNoOutput
+     - DisplayYesNo
+   * - Keyboard
+     - KeyboardOnly
+     - KeyboardDisplay
+
+
+
+
 +------------+------------+-----------+
 | Header 1   | Header 2   | Header 3  |
 +============+============+===========+
@@ -44,7 +64,7 @@ Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
 | body row 2 | Cells may span columns.|
 +------------+------------+-----------+
 
-+-----+-----+-----+-----+-----+-----+-----+-----+
++------+------+------+------+------+-----+-----+-----+
 | Nodo| Hercules1|Hercules2  | Hercules3 |Hercules4  | Hercules5 | Hercules6 | Hercules7 |
 +=====+=====+=====+=====+=====+=====+=====+=====+
 | Procesador |  Xeon E5620| Xeon E5620 | Xeon E5620 | Xeon E5620 | Xeon E5620 |  Xeon E5-2609| Xeon Silver 4208 |
