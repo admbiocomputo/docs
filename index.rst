@@ -36,30 +36,6 @@ Hardware de la Federacion de Clusters del CECC
 Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
 *************************************************
 
-=====  =====  ======
-   Inputs     Output
-------------  ------
-  A      B    A or B
-=====  =====  ======
-False  False  False
-True   False  True
-=====  =====  ======
-
-+======+====+========+
-+------------+------------+-----------+
-| Header 1   | Header 2   | Header 3  |
-+------------+------------+-----------+
-
-
-+======+=======+=====+
-| body row 1 | column 2   | column 3  |
-+------------+------------+-----------+
-
-=== === === 
-Nodo  Hercules1  Hercules2  
-Procesador   Xeon E5620  Xeon E5620
-+------------+------------+------------+
-
 
 +------------+------------+-----------+
 | Nodo   | Hercules1   | Header 2  |
@@ -82,19 +58,6 @@ Procesador   Xeon E5620  Xeon E5620
 			
 Cluster qTeorica,
 ***************						
-	.. csv-table:: a title
-   :header: "name", "firstname", "age"
-   :widths: 20, 20, 10
-
-   "Smith", "John", 40
-   "Smith", "John, Junior", 20					
-
-
-.. tabularcolumns:: |l|c|p{5cm}|
-
-+--------------+---+-----------+
-|  simple text | 2 | 3         |
-+--------------+---+-----------+
 
 
 +------------+------------+-----------+
