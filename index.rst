@@ -81,7 +81,7 @@ Cluster qTeorica,
 | row 1 | column 2   | column 3  |4 | 5| 6 | 7 | 8 |
 +------------+--------------+-------------+---+--+----+---+--+
 
-. list-table:: Frozen Delights!
+.. list-table:: Frozen Delights!
    :widths: 15 10 30
    :header-rows: 1
 
