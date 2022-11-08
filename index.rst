@@ -36,35 +36,18 @@ Hardware de la Federacion de Clusters del CECC
 Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
 *************************************************
 
-.. list-table:: Input and output capabilities
-   :header-rows: 1
 
-   * - Nodo
-     - Hercules1
-     - Hercules2
-     - Hercules3
-     - Hercules4
-     - Hercules5
-     - Hercules6
-     - Hercules7
-   * - Procesador
-     - Xeon E5620
-     - Xeon E5620
-     - Xeon E5620
-     - Xeon E5620
-     - Xeon E5620
-     - Xeon E5-2609
-     - Xeon Silver 4208
-   * - Slots 
-     - 2
-     - 2
-     - 2
-     - 2
-     - 2
-     - 2
-     - 2
-     * -
-   
+.. csv-table:: Frozen Delights!
+   :header: "nodo", "Hercules1", "Hercules2", "Hercules3", "Hercules4", "Hercules5", "hercules6", "hercules7"
+   :widths: 27, 30, 30, 30, 30, 30, 30, 30
+
+   "Procesador", "Xeon E5620", "Xeon E5620", "Xeon E5620",  "Xeon E5620", "Xeon E5620", "Xeon E5-2609", "Xeon Silver 4208"
+   "Slots/Nodo", "2", "2", "2", "2", "2", "2", "2"
+   "Cores/Nodo", "8", "8", "8", "8", "8", "4", "16"
+
+
+ 
+
 
 | Memoria/Nodo | 22Gb@0.9 ns | 47Gb@0.9 ns |  47Gb@0.9 ns| 47Gb@0.9 ns| 47Gb@0.9 ns | 62Gb@0.6 ns | 62Gb@0.3 ns |
 | Velocidad Base | 2.40 GHz |  2.40 GHz| 2.40 GHz |  2.40 GHz| 2.40 GHz | 2.50 GHz	 |  2,10 GHz|
@@ -82,14 +65,6 @@ Cluster qTeorica,
 +------------+--------------+-------------+---+--+----+---+--+
 
 
-.. csv-table:: Frozen Delights!
-   :header: "nodo", "Hercules1", "Hercules2", "Hercules3", "Hercules4", "Hercules5", "hercules6", "hercules7"
-   :widths: 30, 30, 30, 30, 30, 30, 30, 30
-
-   "Procesador", "Xeon E5620", "Xeon E5620", "Xeon E5620",  "Xeon E5620", "Xeon E5620", "Xeon E5-2609", "Xeon Silver 4208"
-
-
- 
 
 .. toctree::
    :maxdepth: -1
