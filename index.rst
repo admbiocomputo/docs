@@ -57,7 +57,11 @@ Cluster qTeorica,
    "Smith", "John, Junior", 20					
 
 
+.. tabularcolumns:: |l|c|p{5cm}|
 
++--------------+---+-----------+
+|  simple text | 2 | 3         |
++--------------+---+-----------+
 
 
 .. toctree::
