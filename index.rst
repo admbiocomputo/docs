@@ -56,7 +56,7 @@ Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
      - Xeon E5620
      - Xeon E5-2609
      - Xeon Silver 4208
-   * - Slots/Nodo 
+   * - Slots 
      - 2
      - 2
      - 2
@@ -64,22 +64,7 @@ Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
      - 2
      - 2
      - 2
-    * - Cores/Nodo
-    - 8
-    - 8
-    - 8
-    - 8
-    - 8
-    - 4
-    - 16
-    * - Threads/Nodo
-    - 16
-    - 16
-    - 16
-    - 16
-    - 16
-    - 8
-    - 32
+   
 
 | Memoria/Nodo | 22Gb@0.9 ns | 47Gb@0.9 ns |  47Gb@0.9 ns| 47Gb@0.9 ns| 47Gb@0.9 ns | 62Gb@0.6 ns | 62Gb@0.3 ns |
 | Velocidad Base | 2.40 GHz |  2.40 GHz| 2.40 GHz |  2.40 GHz| 2.40 GHz | 2.50 GHz	 |  2,10 GHz|
