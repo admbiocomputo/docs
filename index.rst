@@ -64,7 +64,7 @@ Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
      - 2
      - 2
      - 2
-    - * Cores/Nodo
+    * - Cores/Nodo
     - 8
     - 8
     - 8
@@ -72,7 +72,7 @@ Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
     - 8
     - 4
     - 16
-    -* Threads/Nodo
+    * - Threads/Nodo
     - 16
     - 16
     - 16
