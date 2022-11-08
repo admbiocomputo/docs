@@ -45,7 +45,7 @@ Para conectarse usando MacOS o GNU/Linux abra una terminal y escriba el comando 
 .. image:: images/conect1.png
     :width: 600px
     :align: center
-    :height: 325px
+    :height: 67px
     :alt: Linux terminal image
 
 Si ha seguido los pasos correctamente, tendá acceso al HPC del CECC.  
