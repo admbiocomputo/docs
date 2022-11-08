@@ -44,17 +44,17 @@ Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
    "Slots/Nodo", "2", "2", "2", "2", "2", "2", "2"
    "Cores/Nodo", "8", "8", "8", "8", "8", "4", "16"
    "Threads/Nodo", "16", "16", "16", "16", "16", "8", "32"
-  "Velocidad Base", "2.40 GHz", "2.40 GHz", "2.40 GHz", "2.40 GHz", "2.40 GHz", "2.50 GHz", "2,10 GHz"
-  "Velocidad Turbo", "2.66 GHz", "2.66 GHz", "2.66 GHz", "2.66 GHz", "2.66 GHz", "2.50 GHz", "3,20 GHz" 
-   "RAM/Nodo", "22Gb\@0.9 ns", "47Gb\@0.9 ns", "47Gb\@0.9 ns", "47Gb\@0.9 ns", "47Gb\@0.9 ns", "62Gb\@0.6 ns", "62Gb\@0.3 ns"
-   
+ 
    
    
 			
 Cluster qTeorica,
 ***************						
 
-    
+     "Velocidad Base", "2.40 GHz", "2.40 GHz", "2.40 GHz", "2.40 GHz", "2.40 GHz", "2.50 GHz", "2,10 GHz"
+  "Velocidad Turbo", "2.66 GHz", "2.66 GHz", "2.66 GHz", "2.66 GHz", "2.66 GHz", "2.50 GHz", "3,20 GHz" 
+   "RAM/Nodo", "22Gb\@0.9 ns", "47Gb\@0.9 ns", "47Gb\@0.9 ns", "47Gb\@0.9 ns", "47Gb\@0.9 ns", "62Gb\@0.6 ns", "62Gb\@0.3 ns"
+   
   
 
 
