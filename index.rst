@@ -40,6 +40,8 @@ Cluster biocomputo, 7Nodos, 120Threads, 334Gb RAM
 +------------+------------+-----------+
 | Header 1   | Header 2   | Header 3  |
 +============+============+===========+
+| body row 1 | column 2   | column 3  |
++------------+------------+-----------+
 
 +------+------------+--------------+-------------+------------+--------------+--------------+-----------+
 | Nodo| Hercules1|Hercules2  | Hercules3 |Hercules4  | Hercules5 | Hercules6 | Hercules7 |
