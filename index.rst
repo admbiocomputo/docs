@@ -60,9 +60,10 @@ Cluster qTeorica
    "Slots/Nodo", "2"
    "Cores/Nodo", "16"
    "Threads/Nodo", "32"
+   "RAM/Nodo", "62Gb\@0.4 ns"
    "Velocidad Base", "2,10 GHz"
    "Velocidad Turbo", "3,20 GHz" 
-   "RAM/Nodo", "62Gb\@0.4 ns"
+
 
  Cluster Fisica
 ************						
