@@ -81,23 +81,25 @@ Cluster qTeorica,
 | row 1 | column 2   | column 3  |4 | 5| 6 | 7 | 8 |
 +------------+--------------+-------------+---+--+----+---+--+
 
-
-. flat-table:: Characteristics of the BLE badge
+. list-table:: Frozen Delights!
+   :widths: 15 10 30
    :header-rows: 1
 
-   * - Service
-     - Characteristic
-     - Properties
-   * - :rspan:`2` 0xfee7
-     - 0xfec7
-     - WRITE
-   * - 0xfec8
-     - INDICATE
-   * - 0xfec9
-     - READ
-   * - 0xfee0
-     - 0xfee1
-     - NOTIFY, READ, WRITE
+   * - Treat
+     - Quantity
+     - Description
+   * - Albatross
+     - 2.99
+     - On a stick!
+   * - Crunchy Frog
+     - 1.49
+     - If we took the bones out, it wouldn't be
+       crunchy, now would it?
+   * - Gannet Ripple
+     - 1.99
+     - On a stick!
+
+
 
 .. toctree::
    :maxdepth: -1
