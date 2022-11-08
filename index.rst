@@ -67,7 +67,7 @@ Cluster qTeorica
  Cluster Fisica
 ***************						
 
-.. csv-table::  1Nodos, 32Threads, 62Gb RAM 
+.. csv-table::  1Nodos, 32Threads, 256Gb RAM 
    :header: "nodo", "Irlande"
    :widths: 18, 18
 
