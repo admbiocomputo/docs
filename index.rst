@@ -81,5 +81,25 @@ Cluster Fisica
    "RAM/Nodo", "256Gb\@1.9 ns"
 
  
+ 
 
+
+
+
+.. toctree::
+   :maxdepth: -1
+   :hidden:
+   
+  ingreso.rst
+  asociados/index.rst
+  software/index.rst
+  uso/index.rst
   
+
+
+Indices y tablas
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
