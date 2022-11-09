@@ -1,7 +1,7 @@
 .. _Ingreso:
 
 Iniciar sesión en el HPC del CECC
-===================
+###################
 
 La federacion de clusters del CECC usa un cortafuegos que aisla el sistema de la Internet y solo usuarios e IPs incluidas de una lista permitida pueden acceder. 
 
