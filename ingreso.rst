@@ -26,26 +26,32 @@ Para conectarse usando MacOS o GNU/Linux abra una terminal y escriba el comando 
     :align: center
     :height: 67px
     :alt: Linux terminal image
-Aunque la mayoria de los usuarios usan este metodo debido a riesgos de seguridad adicionales relacionadas con llaves ssh robadas  y comprometidas
+
+Aunque la mayoria de los usuarios usan este metodo, debido a riesgos de seguridad relacionados con llaves ssh robadas  y comprometidas nosotros suguerimos usar ...
  
-
-
-Instalar un cliente SSH
-############
-
 Clientes SSH para windows:
 ************************
 
 `MobaXterm <https://mobaxterm.mobatek.net/download.html>`_
 
+MobaXterm es una herramienta que cuenta con un cliente SSH  y otras caracteristicas  como multi ejecución (ejecutar el mismo codigo en varios servidores a la vez) y compatibilidad con ventanas graficas(X11 forwarding). 
 
-.. image:: /images/Moba.png
-    :width: 600px
+Para conectarse, una vez seleccionado el SSH, aparecerá un recuadro donde deberá introducir la dirección IP 168.176.8.19.
+
+.. image:: /images/Moba/mobases2.PNG
+    :width: 600
     :align: center
-    :height: 331px
-    :alt: MobaXterm image
-    
-MobaXterm es una herramienta para coneccion remota, cuenta con un cliente SSH  y otras caracteristicas  como multi ejecución (ejecutar el mismo codigo en varios servidores a la vez) y compatibilidad con ventanas graficas(X11 forwarding). 
+    :height: 403
+    :alt: MobaXterm tutorial
+ 
+Se expande una ventana emergente donde debe ingresar el ingresé el usuario y/o contraseña suministrada. 
+
+.. image:: /images/Moba/mobases4.PNG
+    :width: 600
+    :align: center
+    :height: 334
+    :alt: MobaXterm tutorial
+ 
 
 
 `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_
@@ -138,23 +144,7 @@ Cuando vez oprima dicho botón, aparecerá un menú donde debrá seleccionar el 
     :alt: MobaXterm tutorial
 
 
-Una vez seleccionado SSH, aparecerá un recuadro donde deberá introducir la dirección IP del HPC del CECC
 
-.. image:: /images/Moba/mobases2.PNG
-    :width: 600
-    :align: center
-    :height: 403
-    :alt: MobaXterm tutorial
- 
- 
-Despues de haber introducido la dirección IP, saldrá este recuadro donde se le pedira que ingresé el usuario y contraseña que el administrador le haya suministrado: 
-
-.. image:: /images/Moba/mobases4.PNG
-    :width: 600
-    :align: center
-    :height: 334
-    :alt: MobaXterm tutorial
- 
 
 
 Si ha seguido los pasos correctamente, tendá acceso al HPC del CECC.  
