@@ -7,6 +7,7 @@ Bienvenido al HPC del  CECC!
 =================
 
 Este sitio contiene la documentacion de la Federacion de clusters del Centro de Excelencia para Computacion Cientifica de la Universidad Nacional de Colombia  `"CECC" <https://cecc.unal.edu.co/>`_
+
 .. image:: /images/DiagramHPC.svg
     :width: 780px
     :align: center
