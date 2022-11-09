@@ -16,7 +16,7 @@ Ingreso
 Coneccion usando ssh
 ############
 
-Para acceder( `loguearse <https://es.wikipedia.org/wiki/Login>`_ )  al HPC del `CECC <https://cecc.unal.edu.co>`_ usted debe usar `ssh (Secure SHell) <https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-es-4/ch-ssh.html>`_, esta via facilita la comunicacion entre computadoras que usan sistemas operativos GNU/Linux;   Computadoras con sistema operativo `GNU/Linux <https://www.gnu.org/home.es.html>`_ o MacOS vienen con un cliente ssh que puede usar en la linea de comandos(CLI).  Si usa windows existen varios clientes ssh (software) con los que puede conectarse. 
+Para acceder( `loguearse <https://es.wikipedia.org/wiki/Login>`_ )  al HPC del `CECC <https://cecc.unal.edu.co>`_ usted debe usar `ssh (Secure SHell) <https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-es-4/ch-ssh.html>`_, esta via facilita la comunicacion entre computadoras ;   Computadoras con sistema operativo `GNU/Linux <https://www.gnu.org/home.es.html>`_ o MacOS vienen con un cliente ssh que puede usar en la linea de comandos(CLI).  Si usa windows existen varios clientes ssh (software) con los que puede conectarse. 
 
 Instalar un cliente SSH
 ############
