@@ -102,7 +102,7 @@ Cluster Quimica Teorica
 Usted puede correr gaussian16  en la Federacion de cluster  de dos maneras:
 
 1.  En una sesion iteractiva donde los resultados se esperan en tiempos no mayores a tres(3) horas y, 
-2. mediante scripts donde usted agenda su trabajo para ser ejecutado; normalmente son trabajos que reservan recursos entre 8 horas hasta 12 dias.
+2. mediante el envio de scripts donde se agenda su trabajo para ser  ejecutado; normalmente son trabajos que reservan y usan los recursos entre 8 horas hasta 15 dias o lo asignado a su proyecto.
   
  **Ejecutar gaussian16 en una sesion Interactiva via SRUN**
 Este procedimiento no requiere de agendamiento para reservar los recursos y ejecutar los procesos;  Siempre y cuando esten disponibles y su programa no requiera mas de tres(3) horas --reloj Pared--de procesamiento se ejecutara inmediatamente.
