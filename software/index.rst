@@ -102,16 +102,17 @@ Cluster Quimica Teorica
 Usted puede correr gaussian16  en la Federacion de cluster  de dos maneras:
 
 1.  En una sesion iteractiva donde los resultados se esperan en tiempos no mayores a tres(3) horas y, 
-2. mediante el envio de scripts donde se agenda su trabajo para ser  ejecutado; normalmente son trabajos que reservan y usan los recursos entre 8 horas hasta 15 dias o lo asignado a su proyecto.
+2. mediante el envio de scripts donde se agenda su trabajo para ser  ejecutado; normalmente son trabajos que reservan y usan los recursos entre 8 horas hasta 15 dias o lo asignado al  proyecto del usuario.
   
  **Ejecutar gaussian16 en una sesion Interactiva via SRUN**
-Este procedimiento no requiere de agendamiento para reservar los recursos con los que ejecutara los procesos;  Siempre y cuando esten disponibles y su programa no requiera mas de tres(3) horas reloj pared -- `wall-clock <https://en.wikipedia.org/wiki/Elapsed_real_time#:~:text=Elapsed%20real%20time%2C%20real%20time,at%20which%20the%20task%20started.>`_  -- de procesamiento se ejecutara inmediatamente.
+Este procedimiento no requiere de agendamiento para reservar los recursos con los que ejecutara los procesos;  Siempre y cuando esten disponibles y su programa no requiera mas de tres(3) horas reloj pared -- `wall-clock <https://en.wikipedia.org/wiki/Elapsed_real_time#:~:text=Elapsed%20real%20time%2C%20real%20time,at%20which%20the%20task%20started.>`_  -- de procesamiento; se ejecutara inmediatamente.
 
-Primero usted debe conectarse en una sesion --shell-- en el nodo control del cluster qteorica o usando el nodo control de la Federacion de clusters.
- 
-Luego debe solicitar los recursos en una sesion interactiva usando el commando SRUN;  si inicia desde el nodo de la federacion debe adicionar el parametro -M NombreCluster, tambien deberia adicionar el parametro que indica el grupo de nodos --o particion-- a los que va acceder con -p NombrePartion.  en el ejemplo que sigue se reserva todo los recursos de un(1) nodo:
- 
- srun -M qteorica -p debug --pty /bin/bash -i
+Luego de conectarse en una sesion --shell-- en el nodo de logeo del cluster qteorica o usando el nodo de logeo de la Federacion de clusters, debe solicitar los recursos en una sesion interactiva usando el commando SRUN.
+
+Si inicia desde el nodo de la federacion debe adicionar el parametro -M NombreCluster, tambien deberia adicionar el parametro que indica el grupo de nodos --o particion-- a los que va acceder con -p NombreParticion.  en el ejemplo que sigue se reserva todo los recursos de un(1) nodo:
+
+ .. code-block:: bash
+    srun -M qteorica -p debug --pty /bin/bash -i
  
 Si usted se logeo al nodo control del cluster qteorica no requiere indicar en que cluster desea reservar recursos, por omision los recursos se reservan en el cluster al que pertenece el nodo donde se logea. En el ejemplo se reserva todo los recursos de un nodo en el cluster al que pertenece el mismo nodo.
  
