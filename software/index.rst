@@ -97,7 +97,7 @@ Cluster Quimica Teorica
 *********
 `gaussian 16 <https://gaussian.com/g16main/>`_ es un conjunto de herramientas de software para el modelamiento de estructuras electronicas en sistemas moleculares. 
 
-.. note:: El software se encuentra disponible en: **/localapps/centos7.gaussian16.sif** .
+.. note:: El container con gaussian16 esta en: **/localapps/centos7.gaussian16.sif** .
 
 
 .. seealso:: This is a simple **seealso** note.
