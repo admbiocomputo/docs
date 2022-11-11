@@ -27,7 +27,7 @@ Para conectarse usando MacOS o GNU/Linux abra una terminal y escriba el comando 
     :height: 67px
     :alt: Linux terminal image
 
-Aunque la mayoria de los usuarios usan este metodo, debido a riesgos de seguridad relacionados con llaves ssh robadas  y comprometidas nosotros suguerimos usar ...
+Aunque la mayoria de los usuarios usan este metodo con contrasena, debido a riesgos de seguridad nosotros le sugerimos usar el metodo de autentificacion con Clave Publica.
  
 Clientes SSH para windows
 ************************
@@ -48,9 +48,7 @@ luego  en la ventana emergente debera ingresar el usuario y/o contraseña sumini
 
 `PuTTY <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>`_
 
-Putty es un cliente SSH que requiere pocos recursos y permite crear llaves SSH.
-
-Una vez abierto el programa,  deberá ingresar la dirección IP 168.176.8.19  y verificar que el tipo de conexión  sea *SSH*
+Putty es un cliente SSH que requiere pocos recursos y permite crear llaves SSH.  Una vez abierto el programa,  deberá ingresar la dirección IP 168.176.8.19  y verificar que el tipo de conexión  sea *SSH* y el puerto corresponda a 22.
 
 .. image:: /images/Putty/Putty.PNG
     :width: 452px
@@ -58,4 +56,4 @@ Una vez abierto el programa,  deberá ingresar la dirección IP 168.176.8.19  y 
     :height: 442px
     :alt: Putty tutorial
     
-luego  en la ventana emergente debera ingresar el usuario y/o contraseña suministrada. 
+Luego  en la ventana emergente debera ingresar el usuario y/o contraseña suministrada. 
