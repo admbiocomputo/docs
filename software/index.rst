@@ -105,9 +105,9 @@ Usted puede correr gaussian16  en la Federacion de cluster  de dos maneras:
 2. mediante el envio de scripts donde se agenda su trabajo para ser  ejecutado; normalmente son trabajos que reservan y usan los recursos entre 8 horas hasta 15 dias o lo asignado a su proyecto.
   
  **Ejecutar gaussian16 en una sesion Interactiva via SRUN**
-Este procedimiento no requiere de agendamiento para reservar los recursos y ejecutar los procesos;  Siempre y cuando esten disponibles y su programa no requiera mas de tres(3) horas --reloj Pared--de procesamiento se ejecutara inmediatamente.
+Este procedimiento no requiere de agendamiento para reservar los recursos con los que ejecutara los procesos;  Siempre y cuando esten disponibles y su programa no requiera mas de tres(3) horas --reloj pared o 'wall-clock <https://en.wikipedia.org/wiki/Elapsed_real_time#:~:text=Elapsed%20real%20time%2C%20real%20time,at%20which%20the%20task%20started.>'_--de procesamiento se ejecutara inmediatamente.
 
-Primero, usted debe conectarse en una sesion --shell-- en el nodo de control del cluster qteorica o usando el nodo control de la Federacion de clusters.
+Primero usted debe conectarse en una sesion --shell-- en el nodo control del cluster qteorica o usando el nodo control de la Federacion de clusters.
  
 Luego debe solicitar los recursos en una sesion interactiva usando el commando SRUN;  si inicia desde el nodo de la federacion debe adicionar el parametro -M NombreCluster, tambien deberia adicionar el parametro que indica el grupo de nodos --o particion-- a los que va acceder con -p NombrePartion.  en el ejemplo que sigue se reserva todo los recursos de un(1) nodo:
  
