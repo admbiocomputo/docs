@@ -111,7 +111,7 @@ Luego de conectarse en una sesion --shell-- en el nodo de logeo del cluster qteo
 
 Si inicia desde el nodo de la federacion debe adicionar el parametro -M NombreCluster, tambien deberia adicionar el parametro que indica el grupo de nodos --o particion-- a los que va acceder con -p NombreParticion.  en el ejemplo que sigue se reserva todo los recursos de un(1) nodo:
 
- .. code-block:: bash
+ .. code-block:: ruby
     srun -M qteorica -p debug --pty /bin/bash -i
  
 Si usted se logeo al nodo control del cluster qteorica no requiere indicar en que cluster desea reservar recursos, por omision los recursos se reservan en el cluster al que pertenece el nodo donde se logea. En el ejemplo se reserva todo los recursos de un nodo en el cluster al que pertenece el mismo nodo.
