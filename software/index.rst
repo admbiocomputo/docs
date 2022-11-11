@@ -99,11 +99,6 @@ Cluster Quimica Teorica
 
 .. note:: El container con gaussian16 esta en: **/localapps/centos7.gaussian16.sif** .
 
-
-.. seealso:: This is a simple **seealso** note.
-
-
-
 Usted puede correr gaussian16  en la Federacion de cluster  de dos maneras:
 
 1.  En una sesion iteractiva donde los resultados se esperan en tiempos no mayores a tres(3) horas y, 
