@@ -114,10 +114,7 @@ Si inicia desde el nodo de la federacion debe adicionar el parametro -M NombreCl
 .. sidebar:: Ejecutar SRUN 
     :subtitle: Desde el nodo de logeo del cluster asociado
 
-   **srun  -p NombreParticion --pty /bin/bash -i**
-    Subsequent indented lines comprise
-    the body of the sidebar, and are
-    interpreted as body elements.
+    srun  -p NombreParticion --pty /bin/bash -i
     
 
 .. topic:: Desde el nodo de login de la Federacion
