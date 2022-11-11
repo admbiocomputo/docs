@@ -22,7 +22,7 @@ Este procedimiento no requiere de agendamiento para reservar los recursos y ejec
 
 Primero, usted debe conectarse en una sesion --shell-- en el nodo de control del cluster qteorica o usando el nodo control de la Federacion de clusters.
  
-Luego debe solicitar los recursos en una sesion interactiva con el commando SRUN;  si inicia desde el nodo de la federacion debe adicionar el parametro -M NombreCluster, tambien deberia adicionar el parametro que indica el grupo de nodos --o particion-- a los que va acceder con -p NombrePartion.  en el ejemplo que sigue se reserva todo los recursos de un(1) nodo:
+Luego debe solicitar los recursos en una sesion interactiva usando el commando SRUN;  si inicia desde el nodo de la federacion debe adicionar el parametro -M NombreCluster, tambien deberia adicionar el parametro que indica el grupo de nodos --o particion-- a los que va acceder con -p NombrePartion.  en el ejemplo que sigue se reserva todo los recursos de un(1) nodo:
  
  srun -M qteorica -p debug --pty /bin/bash -i
  
