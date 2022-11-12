@@ -187,4 +187,9 @@ El contenido de *script.sh* es::
 Después puede agendar su ejecucion  con::
 	*sbatch -M qteorica run_gaussian.sh*
 
+.. toctree::
+   :maxdepth: -1
+   :hidden:
+   
+  software/indexQteorica.rst
 
