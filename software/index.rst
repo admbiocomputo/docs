@@ -175,10 +175,8 @@ Para ejecutar gaussian el script *run_gaussian.sh*  podria contener::
   #SBATCH --mail-user=test@unal.edu.co	#El correo donde se enviaran notificaciones cuando inicie y finalice el trabajo.
         
        unset SINGULARITY_BINDPATH  #remuevo atributos y valores de la variable *SINGULARITY_BINDPATH*
-       export SINGULARITY_BINDPATH="/homes:/homes" 
-           #la variable *SINGULARITY_BINDPATH* permite acceso al directorio /homes vinculandolo el directorio /homes  dentro del container.
-       *singularity exec /localapps/centos7.gaussian16.sif  /bin/sh script.sh*
-            #Desde el container, ejecuto con el interprete /bin/sh y el contenido del  script *script.sh*
+       export SINGULARITY_BINDPATH="/homes:/homes"  #Permite acceso al directorio /homes vinculandolo al directorio /homes  dentro del container.
+       *singularity exec /localapps/centos7.gaussian16.sif  /bin/sh script.sh* #Desde el container, ejecuto el contenido del  script *script.sh*
 
 El contenido de *script.sh* es::
 
