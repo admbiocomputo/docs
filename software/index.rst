@@ -113,9 +113,7 @@ Luego de conectarse en una sesion --shell-- en el nodo de logeo del cluster qteo
 
 .. sidebar:: SRUN 
     :subtitle: srun envia un trabajo y lo ejecuta en tiempo real
-   
-    Para ejecutar una trabajo con srun en un nodo disponible,  de uno de los clusters de  la Federacion debe adicionar el parametro **-M**
- 
+
 **srun -M irlande -p cpu.HigMem.q --pty /bin/bash -i**
  
 Si usted se **logeo en  un cluster asociado**  por omision los recursos se reservan en el cluster al que pertenece el nodo donde se logea. 
@@ -140,9 +138,10 @@ En *sh puede hacerlo asi::
   setenv SINGULARITY_BINDPATH /home/qteorica:/home/qteorica
   setenv GAUSS_SCRDIR /home/qteorica/scratchsan
 
-Luego ejecute *singularity* para podero usar el software del container::
+Luego ejecute *singularity* para usar el software del container::
 
-   singularity shell /localapps/centos7.gaussian16.sif
+   *singularity shell /localapps/centos7.gaussian16.sif*
+   
    El cambio en el prompt le indica que esta dentro del container
    **Singularity>**
  
