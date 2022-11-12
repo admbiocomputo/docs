@@ -162,10 +162,10 @@ Un script para enviar su trabajo es un script de shell con algunas directivas qu
 
 Para ejecutar gaussian el script *run_gaussian.sh*  podria contener::
   
-  #!/bin/bash					#El interprete que su script usa
+  #!/bin/bash	#El interprete que su script usa
   #SBATCH --job-name=gauss16	#Nombre del Trabajo
-  #SBATCH -n 4  				# Indica que usted solicita reservar  4 Procesos o core de CPU
-  #SBATCH -N 1      			# Indica que usted solitica asignar un(1) nodo de computo donde esten disponibles 4 cores(linea anterior).
+  #SBATCH -n 4	# Indica que usted solicita reservar  4 Procesos o core de CPU
+  #SBATCH -N 1	# Indica que usted solitica asignar un(1) nodo de computo donde esten disponibles 4 cores(linea anterior).
   #SBATCH -t 0-00:30 			#Indica que usted requiere que su trabajo se ejecute 30 minutos, luego se eliminara; aun si no se completa.
   #SBATCH -C centos7 			# Indica que el nodo al que usted solicita debe correr con  Centos7 como sistema operativo.
   #SBATCH -p debug 			#Esta linea indica la particion de la cual se seleccionara los nodos requeridos.
