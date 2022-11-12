@@ -135,6 +135,23 @@ export  SINGULARITY_BINDPATH="/home/qteorica:/home/qteorica"
 export GAUSS_SCRDIR="/home/qteorica/scratchsan"
 
 
+In SLURM you can do this::
+
+  $ sbatch myscript.sh myinput myoutput
+
+And then you can pick the parameters up inside the job script::
+
+  #!/bin/bash
+
+  #SBATCH ...
+  #SBATCH ...
+  ...
+
+  # argument 1 is myinput
+  # argument 2 is myoutput
+  mybinary.x < ${1} > ${2}
+  
+
 .. sidebar:: Inicio una sesion shell en el container con Singularity:
     :subtitle: singularity shell /localapps/centos7.gaussian16.sif
     
