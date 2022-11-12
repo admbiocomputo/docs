@@ -131,10 +131,17 @@ Para usar el software desde un container, la federacion de cluster usa singulari
 
 Adicionalmente debe dar un valor a la variable GAUSS_SCRDIR que indica el directorio donde se almacenaran archivos temporales.
 
-In SLURM you can do this::
+En bash puede hacerlo asi::
 
   export  SINGULARITY_BINDPATH="/home/qteorica:/home/qteorica"
   export GAUSS_SCRDIR="/home/qteorica/scratchsan"
+
+En *sh puede hacerlo asi::
+
+  setenv SINGULARITY_BINDPATH /home/qteorica:/home/qteorica
+  setenv GAUSS_SCRDIR /home/qteorica/scratchsan
+
+
 
 
 In SLURM you can do this::
