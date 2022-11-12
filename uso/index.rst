@@ -24,3 +24,7 @@ En general existen 3 posibles rutas para reservar estos recursos:
 
 Que hacer y que no hacer en los Clusters
 *********************************
+1.  Nunca ejecute procesos en su $HOME, es un espacio de almacenamiento restringido.
+2.  Siempre use el envio de procesos por lotes, exceptuando cuando usa mos nodos de la particion debug, que ejecutara maximo 3 horas y luego eliminara su proceso, aun si no ha terminado.
+3.  Los nodos de login debe usarlos unicamente para editar archivos y enviar trabajos.
+4.  No ejecute procesos iteractivos en los nodos de login.
