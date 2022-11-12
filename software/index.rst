@@ -146,5 +146,5 @@ Luego ejecute *singularity* para usar una sesion *shell* y el software del conta
    singularity shell /localapps/centos7.gaussian16.sif
    
    El cambio en el prompt le indica que  ingreso alcontainer
-   Singularity>
+   "Singularity>"
  
