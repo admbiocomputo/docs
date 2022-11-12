@@ -113,6 +113,7 @@ Si inicia desde el nodo de la federacion debe adicionar el parametro -M NombreCl
 
 .. sidebar:: SRUN 
     :subtitle: srun envia un trabajo y lo ejecuta en tiempo real
+   
     Para enviar un trabajo a procesar en un nodo disponible en un cluster de  la Federacion debe adicionar el parametro **-M Nombre_Cluster**
     **srun -M qteorica -p debug --pty /bin/bash -i**
  
