@@ -115,7 +115,6 @@ Si inicia desde el nodo de la federacion debe adicionar el parametro -M NombreCl
     :subtitle: srun envia un trabajo y lo ejecuta en tiempo real
    
     Para enviar un trabajo a procesar en un nodo disponible en un cluster de  la Federacion debe adicionar el parametro **-M Nombre_Cluster**
-    **srun -M qteorica -p debug --pty /bin/bash -i**
  
 Si usted se logeo al nodo control del cluster qteorica no requiere indicar en que cluster desea reservar recursos, por omision los recursos se reservan en el cluster al que pertenece el nodo donde se logea. En el ejemplo se reserva todo los recursos de un nodo en el cluster al que pertenece el mismo nodo.
  
