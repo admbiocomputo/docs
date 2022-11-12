@@ -109,7 +109,7 @@ Este procedimiento no requiere de agendamiento para reservar los recursos con lo
 
 Luego de conectarse en una sesion --shell-- en el nodo de logeo del cluster qteorica o usando el nodo de logeo de la Federacion de clusters, debe solicitar los recursos en una sesion interactiva usando el commando SRUN.
 
-Si inicia desde el nodo de la federacion debe adicionar el parametro -M NombreCluster, tambien deberia adicionar el parametro que indica el grupo de nodos --o particion-- a los que va acceder con -p NombreParticion.  en el ejemplo que sigue se reserva todo los recursos de un(1) nodo:
+Si inicia desde el nodo de la federacion debe adicionar el parametro -M *NombreCluster*, tambien deberia adicionar el parametro que indica el grupo de nodos --o particion-- a los que va acceder con -p *NombreParticion*.  en el ejemplo que sigue se reserva todo los recursos de un(1) nodo:
 
 .. sidebar:: SRUN 
     :subtitle: srun envia un trabajo y lo ejecuta en tiempo real
