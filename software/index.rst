@@ -154,3 +154,5 @@ Una vez en el container, puede correr gaussian16.  p. ejem::
 
 Ejecutar gaussian16 solicitando los recursos y agendando la ejecucion via scripts
 =============================================
+En la federacion de Cluster del CECC los recursos son aportados por los cluster asociados y se comparten  entre los usuarios,  para garantizar un uso justo, todos deben realizar el envio de trabajos a través del sistema por lotes que ejecutará las aplicaciones en los recursos disponibles.
+
