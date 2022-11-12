@@ -185,6 +185,6 @@ El contenido de *script.sh* es::
         		g16 < test0001.com >test0001.com.out
 
 Después puede enviarlo a ejecucion  con::
-	sbatch -M qteorica run_gaussian.sh
+	*sbatch -M qteorica run_gaussian.sh*
 
 
