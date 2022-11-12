@@ -125,23 +125,19 @@ Si usted se **logeo en  un cluster asociado**  por omision los recursos se reser
 Una vez inicie una sesion interactiva(-i) puede ejecutar el container 
  
 
- **Correr el container con gaussian16 en l+------------------a sesion Interactiva con menos de 3 horas de reloj de pared(wallclock)**
+ **Correr el container con gaussian16 una sesion Interactiva usando srun**
 
-Para ejecutar el container con gaussian16 se usa el software singularity.
-Usted debe primero informar a  singularity los directorios a los que requiere tener acceso desde ele container usando la variable *SINGULARITY_BINDPATH*.  Usted no requiere pasar un valor a esta variable si solo va usar su directorio de trabajo o *$HOME*.  Adicionalmente Tambien debe dar un valor a la variable GAUSS_SCRDIR que asigna el directorio donde se almacenaran los archivos de procesos intermedios(scratch),  
+Para usar el software desde un container, la federacion de cluster usa singularity.  Debera informar a  singularity los directorios a los que  requiere tener acceso; la variable *SINGULARITY_BINDPATH*  almacena estas rutas(path).
+
+Adicionalmente debe dar un valor a la variable GAUSS_SCRDIR que indica el directorio donde se almacenaran archivos temporales(scratch). 
 
 P. eje., 
-El usuario tiene su $HOME en  /home/qteorica/
-El archivo de entrada al programa se llama "test0001.com" y esta en la ruta /home/qteorica/Basic_scripts_SLURM
-El directorio  "GAUSS_SCRDIR" a usar tien la ruta(path) /home/qteorica/scratchsan
-
-Debido a que en este ejemplo Todo lo trabajo en el $HOME del usuario, no requiero pasar un valor a *SINGULARITY_BINDPATH*, o No tiene efecto en el proceso  si le asigno el valor de mi $HOME:
- export  SINGULARITY_BINDPATH="/home/qteorica:/home/qteorica"
-En este ejemplo mi  "GAUSS_SCRDIR" es la ruta /home/qteorica/scratchsan
+export  SINGULARITY_BINDPATH="/home/qteorica:/home/qteorica"
 export GAUSS_SCRDIR="/home/qteorica/scratchsan"
+Luego,
 
-Luego inicio una sesion shell en el container de gaussian
-
-singularity shell /localapps/centos7.gaussian16.sif
-Usted vera el cambio en el prompt cuando ha ingresado al container
+.. sidebar:: Inicio una sesion shell en el container con Singularity:
+    :subtitle: singularity shell /localapps/centos7.gaussian16.sif
+   
+Usted vera el cambio en el prompt cuando ingrese al container
 Singularity>
