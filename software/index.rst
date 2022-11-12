@@ -138,6 +138,9 @@ Luego,
 
 .. sidebar:: Inicio una sesion shell en el container con Singularity:
     :subtitle: singularity shell /localapps/centos7.gaussian16.sif
-   
-Usted vera el cambio en el prompt cuando ingrese al container
-Singularity>
+    
+    Usted vera el cambio en el prompt cuando ingrese al container
+    Singularity>
+    
+ **Correr el container con gaussian16 reservando recursos**    
+
