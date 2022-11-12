@@ -164,16 +164,15 @@ Para ejecutar gaussian el script *run_gaussian.sh*  podria contener::
   
   #!/bin/bash	#El interprete que su script usa
   #SBATCH --job-name=gauss16	#Nombre del Trabajo
-  #SBATCH -n 4	# Indica que usted solicita reservar  4 Procesos o core de CPU
-  #SBATCH -N 1	# Indica que usted solitica asignar un(1) nodo de computo donde esten disponibles 4 cores(linea anterior).
-  #SBATCH -t 0-00:30 			#Indica que usted requiere que su trabajo se ejecute 30 minutos, luego se eliminara; aun si no se completa.
-  #SBATCH -C centos7 			# Indica que el nodo al que usted solicita debe correr con  Centos7 como sistema operativo.
-  #SBATCH -p debug 			#Esta linea indica la particion de la cual se seleccionara los nodos requeridos.
-  #SBATCH --mem-per-cpu=4000 	# Esta linea indica que usted reservara 4G de memoria por Tarea o core de CPU.
-  #SBATCH -o output_%j.txt          			# Esta linea indica que la salida de su trabajo sera redireccionada al archivo output_*JOBID*.txt
-  #SBATCH -e error_%j.txt 				# Esta linea indica que la salida de errores de su trabajo sera redireccionada al archivo  error_JOBID.txt
-  #SBATCH --mail-type=BEGIN,END 		#Esta linea indica que su trabajo enviara un e-mail cuando Inicia y finaliza.
-  #SBATCH --mail-user=test@unal.edu.co	# Esta linea indica la direccion de e-mail donde se enviaran notificaciones cuando inicie y finalice el trabajo.
+  #SBATCH -n 4	#solicita reservar  4 Core de CPU
+  #SBATCH -N 1	#solicita asignar un(1) nodo de computo donde esten disponibles 4 cores(linea anterior).
+  #SBATCH -t 0-00:30	#Su trabajo se ejecutara por 30 minutos, luego se eliminara; aun si no se completa.
+  #SBATCH -p debug	#Esta linea indica la particion de la cual se seleccionara los nodos requeridos.
+  #SBATCH --mem-per-cpu=4000	#Usted reservara 4G de memoria RAM por Tarea o Core de CPU.
+  #SBATCH -o output_%j.txt	#La salida de su trabajo sera redireccionada al archivo output_*JOBID*.txt
+  #SBATCH -e error_%j.txt 	#La salida de errores de su trabajo sera redireccionada al archivo  error_JOBID.txt
+  #SBATCH --mail-type=BEGIN,END	#Se enviara un e-mail cuando Inicie y finalice su trabajo.
+  #SBATCH --mail-user=test@unal.edu.co	#El correo donde se enviaran notificaciones cuando inicie y finalice el trabajo.
         
        unset SINGULARITY_BINDPATH  #Asigno vacio--sin valor-- a la variable *SINGULARITY_BINDPATH*
        export SINGULARITY_BINDPATH="/homes:/homes" 
