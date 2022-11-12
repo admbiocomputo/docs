@@ -112,8 +112,10 @@ Luego de conectarse en una sesion --shell-- en el nodo de logeo del cluster qteo
 **Si inicia sesion desde el nodo de la federacion** debe adicionar el parametro -M *NombreCluster*, tambien deberia adicionar el parametro que indica el grupo de nodos --o particion-- a los que va acceder con -p *NombreParticion*.  en el ejemplo que sigue se reserva todo los recursos de un(1) nodo:
 
 .. sidebar:: SRUN 
-    :subtitle: srun envia un trabajo y lo ejecuta en tiempo real
-
+    srun envia un trabajo y lo ejecuta en tiempo real
+   
+    Para ejecutar una trabajo con srun en un nodo disponible,  de uno de los clusters de  la Federacion debe adicionar el parametro **-M**
+ 
 **srun -M irlande -p cpu.HigMem.q --pty /bin/bash -i**
  
 Si usted se **logeo en  un cluster asociado**  por omision los recursos se reservan en el cluster al que pertenece el nodo donde se logea. 
