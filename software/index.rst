@@ -118,7 +118,7 @@ Luego de conectarse en una sesion --shell-- en el nodo de logeo del cluster qteo
  
 **srun -M irlande -p cpu.HigMem.q --pty /bin/bash -i**
  
-Si usted se **logeo en  un cluster asociado**  por omision los recursos se reservan en el cluster al que pertenece el nodo donde se logea. En el ejemplo se reserva todo los recursos de un nodo en el cluster al que pertenece el nodo.
+Si usted se **logeo en  un cluster asociado**  por omision los recursos se reservan en el cluster al que pertenece el nodo donde se logea. 
  
 **srun -p debug --pty /bin/bash -i**
     
