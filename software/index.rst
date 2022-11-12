@@ -114,7 +114,7 @@ Luego de conectarse en una sesion --shell-- en el nodo de logeo del cluster qteo
 .. sidebar:: SRUN 
     srun envia un trabajo y lo ejecuta en tiempo real
    
-    Para ejecutar una trabajo con srun en un nodo disponible,  de uno de los clusters de  la Federacion debe adicionar el parametro **-M**
+    Para ejecutar una trabajo con srun en un cluster especifico, debe adicionar el parametro *-M NombreCluster*
  
 **srun -M irlande -p cpu.HigMem.q --pty /bin/bash -i**
  
