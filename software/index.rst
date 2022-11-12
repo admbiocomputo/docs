@@ -150,4 +150,4 @@ Luego ejecute *singularity* para usar una sesion *shell* y el software del conta
    "Singularity>"
  
 Una vez en el container, puede correr gaussian16.  p. ejem::
-    g16 < test0001.com >test0001.com.out
+    *g16* < test0001.com >test0001.com.out
