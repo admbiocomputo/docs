@@ -116,6 +116,8 @@ Si inicia desde el nodo de la federacion debe adicionar el parametro -M NombreCl
    
     Para ejecutar una trabajo con srun en un nodo disponible,  de uno de los clusters de  la Federacion debe adicionar el parametro **-M**
  
+**srun -M irlande -p cpu.HigMem.q --pty /bin/bash -i **
+ 
 Si usted se logeo al nodo control del cluster qteorica no requiere indicar en que cluster desea reservar recursos, por omision los recursos se reservan en el cluster al que pertenece el nodo donde se logea. En el ejemplo se reserva todo los recursos de un nodo en el cluster al que pertenece el mismo nodo.
  
 srun -p debug --pty /bin/bash -i
