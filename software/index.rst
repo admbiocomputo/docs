@@ -111,10 +111,8 @@ Luego de conectarse en una sesion --shell-- en el nodo de logeo del cluster qteo
 
 Si inicia desde el nodo de la federacion debe adicionar el parametro -M NombreCluster, tambien deberia adicionar el parametro que indica el grupo de nodos --o particion-- a los que va acceder con -p NombreParticion.  en el ejemplo que sigue se reserva todo los recursos de un(1) nodo:
 
-.. sidebar:: Ejecutar SRUN 
-    :subtitle: Desde el nodo de logeo del cluster asociado
-
-    srun  -p NombreParticion --pty /bin/bash -i
+.. sidebar:: SRUN 
+    :subtitle: srun envia un trabajo y lo ejecuta en tiempo real
     
 
 .. topic:: Desde el nodo de login de la Federacion
