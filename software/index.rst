@@ -156,3 +156,37 @@ Ejecutar gaussian16 solicitando los recursos y agendando la ejecucion via script
 =============================================
 En la federacion de Cluster del CECC los recursos son aportados por los cluster asociados y se comparten  entre los usuarios,  para garantizar un uso justo, todos deben realizar el envio de trabajos a través del sistema por lotes que ejecutará las aplicaciones en los recursos disponibles.
 
+Crear un script para correr gaussian16
+----------------------------------------
+Un script para enviar su trabajo es un script de shell con algunas directivas que especifican la cantidad de CPU, memoria, tiempo a usar, numero de modos, etc., que el sistema interpretará al enviarlo con el comando sbatch.
+
+Para ejecutar gaussian podria ser::
+  
+  #!/bin/bash			#El interprete que su script usa
+  #SBATCH -n 4  		# Indica que usted solicita reservar  4 Procesos o core de CPU
+  #SBATCH -N 1      	# Indica que usted solitica asignar un(1) nodo de computo donde esten disponibles 4 cores(linea anterior).
+  #SBATCH -t 0-00:30 	#Indica que usted requiere que su trabajo se ejecute 30 minutos, luego se eliminara; aun si no se completa.
+  #SBATCH -C centos7 	# Indica que el nodo al que usted solicita debe correr con  Centos7 como sistema operativo.
+  #SBATCH -p sched_mit_hill #Esta linea indica la particion de la cual se seleccionara los nodos requeridos.
+  #SBATCH --mem-per-cpu=4000 # Esta linea indica que usted reservara 4G de memoria por Tarea o core de CPU.
+  #SBATCH -o output_%j.txt          # Esta linea indica que la salida de su trabajo sera redireccionada al archivo output_*JOBID*.txt
+  #SBATCH -e error_%j.txt 		# Esta linea indica que la salida de errores de su trabajo sera redireccionada al archivo  error_JOBID.txt
+  #SBATCH --mail-type=BEGIN,END 	#Esta linea indica que su trabajo enviara un e-mail cuando Inicia y finaliza.
+  #SBATCH --mail-user=test@unal.edu.co	# Esta linea indica la direccion de e-mail donde se enviaran notificaciones cuando inicie y finalice el trabajo.
+        
+       unset SINGULARITY_BINDPATH  #Asigno vacio--sin valor-- a la variable *SINGULARITY_BINDPATH*
+       export SINGULARITY_BINDPATH="/homes:/homes" 
+           #la variable *SINGULARITY_BINDPATH* permite acceso al directorio /homes vinculandolo el directorio /homes  dentro del container.
+       *singularity exec /localapps/centos7.gaussian16.sif  /bin/sh script.sh*
+            #Desde el container, ejecuto con el interprete /bin/sh y el contenido del  script *script.sh*
+
+El contenido de script.sh es
+#!/bin/bash
+   export GAUSS_SCRDIR="/home/qteorica/scratchsan/"
+        g16 < test0001.com >test0001.com.out
+
+
+
+
+Después de escribir su script de trabajo como se muestra en los ejemplos, puede comenzar con:
+
