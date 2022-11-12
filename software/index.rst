@@ -184,7 +184,7 @@ El contenido de *script.sh* es::
    		export GAUSS_SCRDIR="/home/qteorica/scratchsan/"
         		g16 < test0001.com >test0001.com.out
 
-Después puede enviarlo a ejecucion  con::
+Después puede agendar su ejecucion  con::
 	*sbatch -M qteorica run_gaussian.sh*
 
 
