@@ -126,12 +126,11 @@ Una vez inicie una sesion interactiva(-i) puede ejecutar el container
  
 
  **Correr el container con gaussian16 una sesion Interactiva usando srun**
+ ******************************************************************************
 
-Para usar el software desde un container, la federacion de cluster usa singularity.  Debera informar a  singularity los directorios a los que  requiere tener acceso; la variable *SINGULARITY_BINDPATH*  almacena estas rutas(path).
+Para usar el software gaussian16 desde el container, debera informar a  singularity los directorios a los que  requiere tener acceso; la variable *SINGULARITY_BINDPATH*  almacena estas rutas(path).  Adicionalmente debe dar un valor a la variable GAUSS_SCRDIR que indica el directorio donde se almacenaran los archivos temporales.
 
-Adicionalmente debe dar un valor a la variable GAUSS_SCRDIR que indica el directorio donde se almacenaran archivos temporales.
-
-En bash puede hacerlo asi::
+Si usa bash puede hacerlo asi::
 
   export  SINGULARITY_BINDPATH="/home/qteorica:/home/qteorica"
   export GAUSS_SCRDIR="/home/qteorica/scratchsan"
@@ -141,31 +140,9 @@ En *sh puede hacerlo asi::
   setenv SINGULARITY_BINDPATH /home/qteorica:/home/qteorica
   setenv GAUSS_SCRDIR /home/qteorica/scratchsan
 
+Luego ejecute *singularity* para podero usar el software del container::
 
-
-
-In SLURM you can do this::
-
-  $ sbatch myscript.sh myinput myoutput
-
-And then you can pick the parameters up inside the job script::
-
-  #!/bin/bash
-
-  #SBATCH ...
-  #SBATCH ...
-  ...
-
-  # argument 1 is myinput
-  # argument 2 is myoutput
-  mybinary.x < ${1} > ${2}
-  
-
-.. sidebar:: Inicio una sesion shell en el container con Singularity:
-    :subtitle: singularity shell /localapps/centos7.gaussian16.sif
-    
-    Usted vera el cambio en el prompt cuando ingrese al container
-    Singularity>
-    
- **Correr el container con gaussian16 reservando recursos**    
-
+   singularity shell /localapps/centos7.gaussian16.sif
+   El cambio en el prompt le indica que esta dentro del container
+   **Singularity>**
+ 
