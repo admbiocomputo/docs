@@ -129,10 +129,12 @@ Una vez inicie una sesion interactiva(-i) puede ejecutar el container
 
 Para usar el software desde un container, la federacion de cluster usa singularity.  Debera informar a  singularity los directorios a los que  requiere tener acceso; la variable *SINGULARITY_BINDPATH*  almacena estas rutas(path).
 
-Adicionalmente debe dar un valor a la variable GAUSS_SCRDIR que indica el directorio donde se almacenaran archivos temporales:: 
+Adicionalmente debe dar un valor a la variable GAUSS_SCRDIR que indica el directorio donde se almacenaran archivos temporales.
 
-export  SINGULARITY_BINDPATH="/home/qteorica:/home/qteorica"
-export GAUSS_SCRDIR="/home/qteorica/scratchsan"
+In SLURM you can do this::
+
+  export  SINGULARITY_BINDPATH="/home/qteorica:/home/qteorica"
+  export GAUSS_SCRDIR="/home/qteorica/scratchsan"
 
 
 In SLURM you can do this::
