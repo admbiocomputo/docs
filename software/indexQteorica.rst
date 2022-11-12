@@ -1,4 +1,4 @@
-.. _Softwareqteorica:
+.. _indexQteorica
 
 Cluster Quimica Teorica
 #################

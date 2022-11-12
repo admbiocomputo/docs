@@ -1,5 +1,5 @@
 
-.. _SoftwareBiocomputo:
+.. _indexBiocomputo
 
 Cluster Biologia Computacional
 #################
