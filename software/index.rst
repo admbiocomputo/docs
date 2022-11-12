@@ -141,10 +141,10 @@ En *sh puede hacerlo asi::
   setenv SINGULARITY_BINDPATH /home/qteorica:/home/qteorica
   setenv GAUSS_SCRDIR /home/qteorica/scratchsan
 
-Luego ejecute *singularity* para usar el software del container::
+Luego ejecute *singularity* para usar una sesion *shell* y el software del container::
 
    *singularity shell /localapps/centos7.gaussian16.sif*
    
-   El cambio en el prompt le indica que esta dentro del container
-   **Singularity>**
+   El cambio en el prompt le indica que  ingreso alcontainer
+   *Singularity>*
  
