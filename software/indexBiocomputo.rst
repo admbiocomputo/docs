@@ -24,29 +24,19 @@ Luego de conectarse con una sesion ssh en el nodo de logeo del cluster biocomput
 Si usted se **accedio a un cluster asociado **,  los recursos se reservan en el cluster al que pertenece el nodo donde ingresa:: 
  
  srun -p cpu.normal.q --pty /bin/bash -i
-    
-**Correr el container con ANVIO7.1 en una sesion Interactiva usando srun**
- ******************************************************************************
-
+ 
 Para usar el software ANVIO7.1 desde el container, debera informar a  singularity los directorios a los que  requiere tener acceso; la variable *SINGULARITY_BINDPATH*  almacena estas rutas(path). 
 
 Si usa bash puede hacerlo asi::
 
   export  SINGULARITY_BINDPATH="/scratchsan/acaroq/divanegasa"
 
-En *sh puede hacerlo asi::
-
-  setenv SINGULARITY_BINDPATH /scratchsan/acaroq/divanegasa
-
-Luego ejecute *singularity* para iniciar una sesion *shell* en el software del container::
+Luego ejecute *singularity* para iniciar una *shell* en el software del container::
 
    *singularity shell /localapps/anvio_7.1_main_0522.sif*
    
-   El cambio en el prompt  indica que  ingreso al container
-   "Singularity>"
- 
-Una vez en el container, puede correr anvio_7.1
-
+El cambio en el prompt  a "Singularity>" indica que  ingreso al container
+   
 Ejecutar Tutorial con Anvio7.1 en el Cluster biocomputo
 -----------------------------------------
 
