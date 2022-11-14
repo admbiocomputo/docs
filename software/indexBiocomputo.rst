@@ -58,7 +58,7 @@ A favor de la simplicidad comenzaremos con un ejemplo sencillo: un solo genoma y
 Primero vaya al directorio asignado en /scratchsan -no use su $HOME--
 descargue alli las lecturas comprimidas, descomprimalas.  Ingrese al directorio donde expandio las lecturas: Encontrara el archivo genome.fa que es la secuencia referencia y el directorio metagenomes que incluye varios metagenomas simulados; supondremos son metagenomas intestinales de humanos.
 
-.. image:: /software/images/anvio1.png
+.. image:: /software/images/anvio3.png
     :width: 680px
     :align: left
     :height: 100px
