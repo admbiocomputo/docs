@@ -148,27 +148,22 @@ Una vez en el container, puede correr anvio_7.1
 Ejecutar Tutorial con Anvio7.1 en el Cluster biocomputo
 -----------------------------------------
 
-En este tutorial se seguida lo propuesto por la documentacion ANVIO  en *https://merenlab.org/tutorials/read-recruitment/*, 
+El tutorial sigue lo propuesto por  ANVIO  en:
+ *https://merenlab.org/tutorials/read-recruitment/*
 
 Ejemplo para Incluir en ANVIO  los datos presentes en las lecturas.
 
-El proposito es:
-1. Incluir  los datos de lecturas  en  formatos FASTA, FASTQ, SAM y BAM. 
-2. Aprenda los pasos básicos del incluir lecturascon Bowtie2 y samtools,
-3.  Aprender a perfilar los resultados identificados en la lectura usando anvi'o,
-4.  Familiarizarse con los pasos posteriores del análisis de lecturas usadas.
-
-Los datos usado son simulaciones, que incluyen una secuencia Referencia y otras lecturas cortas que es lo habitual par este tipo de analisis.
+Los datos usado son simulaciones, que incluyen una secuencia Referencia y otras lecturas cortas que, es lo habitual par este tipo de analisis.
 
 El objetivo principal de este análisis  es identificar  y clasificar las secuencias presentes en las lecturas cortas  de una muestra de la que se tiene  una secuencia referencia. 
 
-El conjunto de secuencias referenciaestan en un archivo FASTA, pueden ser uno o más segmentos contiguos de ADN (contigs) que, pueden pertenecer a uno o varios genomas que pueden abarcar genes, genomas ensamblados en metagenomas parciales o completos, genomas amplificados individualmente, genomas aislados, genomas virales o plásmidos: Cualquier secuencia que sea más larga que las lecturas cortas usadas aqui puede servir como referencia.
+El conjunto de secuencias referencia estan en un *FASTA, pueden representar uno o más segmentos contiguos de ADN (contigs) que, pueden pertenecer a uno o varios genomas y abarcan genes, genomas ensamblados en metagenomas parciales o completos, genomas amplificados individualmente, genomas aislados, genomas virales o plásmidos: Una secuencia  más larga que las lecturas cortas usadas aqui puede servir como referencia.
 
-El conjunto de lecturas cortas usado aqui también prodria haberse originado en la secuenciación de un solo genoma, un metagenoma completo o incluso amplicones generados con sus primers. Tampoco es necesarios que sean lecturas cortas, se puede incluir lecturas largas con sus secuencias de referencia.
+El conjunto de lecturas cortas pudo haberse originado en la secuenciación de un solo genoma, un metagenoma completo o incluso amplicones generados con sus primers; no es necesario que sean lecturas cortas, se pueden incluir lecturas largas con sus secuencias de referencia.
 
-Esencialmente, tiene mucha libertad para definir su contexto de secuencia de referencia y lecturas cortas según la pregunta que desea responder. Pero  cuando se usa correctamente una lectura contextualizandola puede responder muchas preguntas en microbiología.
+Esencialmente, tiene mucha libertad para definir su contexto de secuencia de referencia y lecturas cortas según la pregunta que desea responder. Pero  cuando se contextualiza correctamente una lectura  puede responder muchas preguntas en microbiología.
 
-A favor de la simplicidad comenzaremos con un ejemplo sencillo: un solo genoma y un conjunto de metagenomas simulados, ya que el propósito de este tutorial es ofrecerle una vision práctica para identificar las lecturas hasta donde  la ciencia lo permite.
+A favor de la simplicidad comenzaremos con un ejemplo sencillo: un solo genoma y un conjunto de metagenomas simulados, ya que el propósito del tutorial es ofrecer una vision práctica para identificar las lecturas, hasta donde  la ciencia lo permite.
 
 Primero vaya al directorio asignado en /scratchsan -no use su $HOME--
 descargue alli las lecturas comprimidas, descomprimalas.  Ingrese al directorio donde expandio las lecturas: Encontrara el archivo genome.fa que es la secuencia referencia y el directorio metagenomes que incluye varios metagenomas simulados; supondremos son metagenomas intestinales de humanos.
