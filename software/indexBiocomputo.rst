@@ -58,9 +58,9 @@ A favor de la simplicidad comenzaremos con un ejemplo sencillo: un solo genoma y
 Primero vaya al directorio asignado en /scratchsan -no use su $HOME--
 descargue alli las lecturas comprimidas, descomprimalas.  Ingrese al directorio donde expandio las lecturas: Encontrara el archivo genome.fa que es la secuencia referencia y el directorio metagenomes que incluye varios metagenomas simulados; supondremos son metagenomas intestinales de humanos::
  [divanegasa@perseus ~]$ srun -M biocomputo -p cpu.normal.q -w hercules2 --pty /bin/bash -i
- [divanegasa@perseus ~]$ cd /scratchsan/acaroq/divanegasa/
- [divanegasa@perseus ~]$ curl -L https://figshare.com/ndownloader/files/31180186 -o metagenomic-read-recruitment-data-pack.tar.gz
- [divanegasa@perseus ~]$ tar -zxvf metagenomic-read-recruitment-data-pack.tar.gz
+ [divanegasa@hercules2 ~]$ cd /scratchsan/acaroq/divanegasa/
+ [divanegasa@hercules2 ~]$ curl -L https://figshare.com/ndownloader/files/31180186 -o metagenomic-read-recruitment-data-pack.tar.gz
+ [divanegasa@hercules2 ~]$ tar -zxvf metagenomic-read-recruitment-data-pack.tar.gz
 
 Preparacion de las lecturas
 -----------------------
