@@ -62,14 +62,12 @@ descargue alli las lecturas comprimidas, descomprimalas.  Ingrese al directorio 
  [divanegasa@hercules2 ~]$ curl -L https://figshare.com/ndownloader/files/31180186 -o metagenomic-read-recruitment-data-pack.tar.gz
  [divanegasa@hercules2 ~]$ tar -zxvf metagenomic-read-recruitment-data-pack.tar.gz
  [divanegasa@hercules2 ~]$ cd metagenomic-read-recruitment-data-pack
+
  
 Preparacion de las lecturas
------------------------
-
+---------------------------
 Se requiere construir una base de datos con el genoma referencia para sobre ella realizar una anotacion funcional de los genes: identificandolos y usando solo una sola copia del gen al que se adjunta información taxonómica::
  [divanegasa@hercules2 ~]$ anvi-gen-contigs-database -f genome.fa -o genome.db
-
-
 
 Ejecutar ANVIO7.1 solicitando los recursos y agendando la ejecucion via scripts
 =============================================
