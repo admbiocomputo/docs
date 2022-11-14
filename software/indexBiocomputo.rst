@@ -25,8 +25,7 @@ Si usted se **accedio a un cluster asociado **,  los recursos se reservan en el 
  
  srun -p cpu.normal.q --pty /bin/bash -i
     
-
- **Correr el container con ANVIO7.1 en una sesion Interactiva usando srun**
+**Correr el container con ANVIO7.1 en una sesion Interactiva usando srun**
  ******************************************************************************
 
 Para usar el software ANVIO7.1 desde el container, debera informar a  singularity los directorios a los que  requiere tener acceso; la variable *SINGULARITY_BINDPATH*  almacena estas rutas(path). 
