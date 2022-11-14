@@ -47,7 +47,7 @@ Debe iniciar sesion en el nodo de acceso permitiendo "X",  para ello use *ssh* c
 
 puede iniciar una sesion iteractiva con srun::
 
-        *srun -M biocomputo --x11  -p cpu.normal.q -w hercules2 --pty bash -i*
+ *srun -M biocomputo --x11  -p cpu.normal.q -w hercules2 --pty bash -i*
  
 Clientes SSH para windows
 ************************
