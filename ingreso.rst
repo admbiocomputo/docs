@@ -42,7 +42,10 @@ Para proporcionar ambientes graficos en sesiones ssh debe adicionar parametro "-
     :align: center
     :height: 194px
     :alt: Linux Xterminal image
-Debe iniciar sesion en el nodo de acceso permitiendo "X",  agregando  a *ssh* el parametro "-X"   hasta llegar al nodo de envio y desde alli puede iniciar una sesion iteractiva con srun::
+    
+Debe iniciar sesion en el nodo de acceso permitiendo "X",  para ello use *ssh* con el parametro "-X"   hasta llegar al nodo de envio y desde alli 
+
+puede iniciar una sesion iteractiva con srun::
 	srun -M biocomputo --x11  -p cpu.normal.q -w hercules2 --pty bash -i
  
 Clientes SSH para windows
