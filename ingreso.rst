@@ -16,10 +16,11 @@ Ingreso
 Coneccion usando ssh
 ********************
 
-Para acceder( `loguearse <https://es.wikipedia.org/wiki/Login>`_ )  al HPC del `CECC <https://cecc.unal.edu.co>`_ usted debe usar `ssh (Secure SHell) <https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-es-4/ch-ssh.html>`_, esta via facilita la comunicacion entre computadoras ;   Computadoras con sistema operativo `GNU/Linux <https://www.gnu.org/home.es.html>`_ o MacOS vienen con un cliente ssh que puede usar en la linea de comandos(CLI).  Si usa windows existen varios clientes ssh (software) con los que puede conectarse. 
+Para acceder( `loguearse <https://es.wikipedia.org/wiki/Login>`_ )  al HPC del `CECC <https://cecc.unal.edu.co>`_ usted debe usar `ssh (Secure SHell) <https://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-rg-es-4/ch-ssh.html>`_, esta via facilita la comunicacion entre computadoras.
+Computadoras con sistema operativo `GNU/Linux <https://www.gnu.org/home.es.html>`_ o MacOS vienen con un cliente ssh que puede usar en la linea de comandos(CLI).  Si usa windows existen varios clientes ssh (software) con los que puede conectarse. 
 
 
-Para conectarse usando MacOS o GNU/Linux abra una terminal y escriba el comando *ssh* seguido de *su usuario@168.176.8.19*  
+Para conectarse usando MacOS o GNU/Linux al nodo de ingreso del CECC, ejecute una terminal y escriba el comando *ssh* seguido de *su usuario@168.176.8.19*  
 
 .. image:: images/conect1.png
     :width: 600px
@@ -28,6 +29,19 @@ Para conectarse usando MacOS o GNU/Linux abra una terminal y escriba el comando 
     :alt: Linux terminal image
 
 Aunque la mayoria de los usuarios usan este metodo con contrasena, debido a riesgos de seguridad nosotros le sugerimos usar el metodo de autentificacion con Clave Publica.
+
+Iniciar sesiones GUI con ssh
+*************************
+
+Este procedimiento es dependiente del ancho de banda del que dispone el usuario y normalmente es eficiente cuando se usan maquinas conectadas fisicamente a la red del campus.  
+
+Para proporcionar ambientes graficos en sesiones ssh debe adicionar parametro "-X",  tambien puede adicionar el parametro "-C" para comprimir la informacion  que envia a traves de la red.   Puede verificar que habilito ambientes graficos o "X" ejecutando el programa "xclock".
+
+Debe iniciar sesion en el nodo de acceso permitiendo "X",  agregando  a *ssh* el parametro "-X"   hasta llegar al nodo de envio y desde alli puede iniciar una sesion iteractiva con srun::
+
+srun -M biocomputo --x11  -p cpu.normal.q -w hercules2 --pty bash -i
+
+  
  
 Clientes SSH para windows
 ************************
