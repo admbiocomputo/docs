@@ -66,6 +66,10 @@ descargue alli las lecturas comprimidas, descomprimalas.  Ingrese al directorio 
  
 Preparacion de las lecturas
 ---------------------------
+La preparacion de las lecturas requiere ingresar al container y usar el software ANVIO7.1 sobre los datos descargados y expandidos en el anterior procedimiento::
+ [divanegasa@hercules2 ~]$ export SINGULARITY_BINDPATH="/scratchsan:/scratchsan"
+ [divanegasa@hercules2 ~]$ singularity shell /localapps/anvio_7.1_main_0522.sif
+  
 Se requiere construir una base de datos con el genoma referencia para sobre ella realizar una anotacion funcional de los genes: identificandolos y usando solo una sola copia del gen al que se adjunta información taxonómica::
 
  [divanegasa@hercules2 ~]$ anvi-gen-contigs-database -f genome.fa -o genome.db
