@@ -33,9 +33,16 @@ Aunque la mayoria de los usuarios usan este metodo con contrasena, debido a ries
 Iniciar sesiones GUI con ssh
 *************************
 
-Este procedimiento es dependiente del ancho de banda del que dispone el usuario y normalmente es eficiente cuando se usan maquinas conectadas fisicamente a la red del campus.  
+Este procedimiento es dependiente del ancho de banda del que dispone el usuario y, normalmente es eficiente cuando se usan maquinas conectadas fisicamente a la red del campus.  
 
 Para proporcionar ambientes graficos en sesiones ssh debe adicionar parametro "-X",  tambien puede adicionar el parametro "-C" para comprimir la informacion  que envia a traves de la red.   Puede verificar que habilito ambientes graficos o "X" ejecutando el programa "xclock".
+
+.. image:: images/sshx.png
+    :width: 480px
+    :align: center
+    :height: 194px
+    :alt: Linux Xterminal image
+
 
 Debe iniciar sesion en el nodo de acceso permitiendo "X",  agregando  a *ssh* el parametro "-X"   hasta llegar al nodo de envio y desde alli puede iniciar una sesion iteractiva con srun::
 
