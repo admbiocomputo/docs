@@ -51,7 +51,7 @@ El conjunto de secuencias referencia son un FASTA, pueden representar uno o más
 
 El conjunto de lecturas cortas pudo haberse originado en la secuenciación de un solo genoma, un metagenoma completo o incluso amplicones generados con sus primers; no es necesario que sean lecturas cortas, se pueden incluir lecturas largas con sus secuencias de referencia.
 
-Esencialmente, tiene mucha libertad para definir su contexto de secuencia de referencia y lecturas cortas según la pregunta que desea responder. Pero  cuando se contextualiza correctamente una lectura  puede responder muchas preguntas en microbiología.
+Hay mucha libertad para definir el contexto de su secuencia de referencia y lecturas cortas según la pregunta que desea responder. Pero  cuando se contextualiza correctamente una lectura  puede responder muchas preguntas en microbiología.
 
 A favor de la simplicidad comenzaremos con un ejemplo sencillo: un solo genoma y un conjunto de metagenomas simulados, ya que el propósito del tutorial es ofrecer una vision práctica para identificar las lecturas, hasta donde  la ciencia lo permite.
 
