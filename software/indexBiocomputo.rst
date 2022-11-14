@@ -37,19 +37,17 @@ Luego ejecute *singularity* para iniciar una *shell* en el software del containe
    
 El cambio en el prompt  a "Singularity>" indica que  ingreso al container
    
-Ejecutar Tutorial con Anvio7.1 en el Cluster biocomputo
+Tutorial con Anvio7.1 en el Cluster biocomputo
 -----------------------------------------
 
 El tutorial sigue lo propuesto por  ANVIO  en:
  *https://merenlab.org/tutorials/read-recruitment/*
 
-Ejemplo para Incluir en ANVIO  los datos presentes en las lecturas.
+Los datos usado son obtenidos de simulaciones e incluyen una secuencia Referencia y lecturas cortas que, es lo habitual en este tipo de analisis.
 
-Los datos usado son simulaciones, que incluyen una secuencia Referencia y otras lecturas cortas que, es lo habitual par este tipo de analisis.
+El objetivo principal del análisis  es identificar  y clasificar las secuencias presentes en las lecturas cortas  de una muestra de la que se tiene  una secuencia referencia. 
 
-El objetivo principal de este análisis  es identificar  y clasificar las secuencias presentes en las lecturas cortas  de una muestra de la que se tiene  una secuencia referencia. 
-
-El conjunto de secuencias referencia estan en un *FASTA, pueden representar uno o más segmentos contiguos de ADN (contigs) que, pueden pertenecer a uno o varios genomas y abarcan genes, genomas ensamblados en metagenomas parciales o completos, genomas amplificados individualmente, genomas aislados, genomas virales o plásmidos: Una secuencia  más larga que las lecturas cortas usadas aqui puede servir como referencia.
+El conjunto de secuencias referencia son un FASTA, pueden representar uno o más segmentos contiguos de ADN (contigs) que, podrian pertenecer a uno o varios genomas y abarcan genes, genomas ensamblados en metagenomas parciales o completos, genomas amplificados individualmente, genomas aislados, genomas virales o plásmidos: Una secuencia  más larga que las lecturas cortas a usar sirve como referencia.
 
 El conjunto de lecturas cortas pudo haberse originado en la secuenciación de un solo genoma, un metagenoma completo o incluso amplicones generados con sus primers; no es necesario que sean lecturas cortas, se pueden incluir lecturas largas con sus secuencias de referencia.
 
@@ -66,8 +64,8 @@ descargue alli las lecturas comprimidas, descomprimalas.  Ingrese al directorio 
     :height: 100px
     :alt: runOrthocluster
 
-Preparacion
--------------
+Preparacion de las lecturas
+-----------------------
 
 Para correr ANVIO es necesario construir una base de datos con el genoma referencia para todos los pasos posteriores, aqui agregamos el parametro --num-threads 8 para usar 8 Nucleos de CPU y agilizar el proceso.
 
