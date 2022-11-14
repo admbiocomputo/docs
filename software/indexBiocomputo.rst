@@ -58,7 +58,7 @@ A favor de la simplicidad comenzaremos con un ejemplo sencillo: un solo genoma y
 Primero vaya al directorio asignado en /scratchsan -no use su $HOME--
 descargue alli las lecturas comprimidas, descomprimalas.  Ingrese al directorio donde expandio las lecturas: Encontrara el archivo genome.fa que es la secuencia referencia y el directorio metagenomes que incluye varios metagenomas simulados; supondremos son metagenomas intestinales de humanos.
 
-.. image:: /software/images/anvio1.png
+.. image:: /software/images/anvio2.png
     :width: 680px
     :align: left
     :height: 100px
@@ -67,7 +67,7 @@ descargue alli las lecturas comprimidas, descomprimalas.  Ingrese al directorio 
 Preparacion de las lecturas
 -----------------------
 
-Para correr ANVIO es necesario construir una base de datos con el genoma referencia para todos los pasos posteriores, aqui agregamos el parametro --num-threads 8 para usar 8 Nucleos de CPU y agilizar el proceso.
+Para correr ANVIO7.1 es necesario construir una base de datos con el genoma referencia para todos los pasos posteriores, aqui agregamos el parametro --num-threads 8 para usar 8 Nucleos de CPU y agilizar el proceso.
 
 sobre la base de datos de los contigs se realizara una anotacion funcional de los genes: identificandolos y usando solo una sola copia del gen al que se adjunta información taxonómica.
 
