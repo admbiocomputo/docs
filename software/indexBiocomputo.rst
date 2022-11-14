@@ -177,13 +177,13 @@ descargue alli las lecturas comprimidas, descomprimalas.  Ingrese al directorio 
 Preparacion
 -------------
 
-es necesario hacer una base de datos con el genoma referencia para todos los pasos posteriores con ANVIO, agregamos el parametro --num-threads 8 para agilizar el proceso.
+Para correr ANVIO es necesario construir una base de datos con el genoma referencia para todos los pasos posteriores, aqui agregamos el parametro --num-threads 8 para usar 8 Nucleos de CPU y agilizar el proceso.
 
-sobre las bases de datos de contigs se una anotacion funcional de los genes: identificandolo y usando solo una sola copia del gen se adjunta información taxonómica.
+sobre la base de datos de los contigs se realizara una anotacion funcional de los genes: identificandolos y usando solo una sola copia del gen al que se adjunta información taxonómica.
 
 
 
-Ejecutar gaussian16 solicitando los recursos y agendando la ejecucion via scripts
+Ejecutar ANVIO7.1 solicitando los recursos y agendando la ejecucion via scripts
 =============================================
 En la federacion de Cluster del CECC los recursos son aportados por los cluster asociados y se comparten  entre los usuarios,  para garantizar un uso justo, todos deben realizar el envio de trabajos a través del sistema por lotes que ejecutará las aplicaciones en los recursos disponibles.
 
