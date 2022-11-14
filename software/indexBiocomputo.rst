@@ -130,13 +130,11 @@ Para usar el software ANVIO7.1 desde el container, debera informar a  singularit
 
 Si usa bash puede hacerlo asi::
 
-  export  SINGULARITY_BINDPATH="/home/qteorica:/home/qteorica"
-  export GAUSS_SCRDIR="/home/qteorica/scratchsan"
+  export  SINGULARITY_BINDPATH="/scratchsan/acaroq/divanegasa"
 
 En *sh puede hacerlo asi::
 
-  setenv SINGULARITY_BINDPATH /home/qteorica:/home/qteorica
-  setenv GAUSS_SCRDIR /home/qteorica/scratchsan
+  setenv SINGULARITY_BINDPATH /scratchsan/acaroq/divanegasa
 
 Luego ejecute *singularity* para iniciar una sesion *shell* en el software del container::
 
