@@ -21,12 +21,10 @@ Luego de conectarse con una sesion ssh en el nodo de logeo del cluster biocomput
 
  *srun -M biocomputo -p cpu.normal.q --pty /bin/bash -i*
  
-Si usted se **logeo en  un cluster asociado**  por omision los recursos se reservan en el cluster al que pertenece el nodo donde se logea. 
+Si usted se **accedio a un cluster asociado **,  los recursos se reservan en el cluster al que pertenece el nodo donde ingresa:: 
  
-**srun -p cpu.normal.q --pty /bin/bash -i**
+ srun -p cpu.normal.q --pty /bin/bash -i
     
-Una vez inicie una sesion interactiva(-i) grafica puede ejecutar el container 
- 
 
  **Correr el container con ANVIO7.1 en una sesion Interactiva usando srun**
  ******************************************************************************
