@@ -66,10 +66,10 @@ descargue alli las lecturas comprimidas, descomprimalas.  Ingrese al directorio 
 Preparacion de las lecturas
 -----------------------
 
-Se requiere construir una base de datos con el genoma referencia antes de seguir con todos los pasos posteriores::
+Se requiere construir una base de datos con el genoma referencia para sobre ella realizar una anotacion funcional de los genes: identificandolos y usando solo una sola copia del gen al que se adjunta información taxonómica::
  [divanegasa@hercules2 ~]$ anvi-gen-contigs-database -f genome.fa -o genome.db
 
-sobre la base de datos de los contigs se realizara una anotacion funcional de los genes: identificandolos y usando solo una sola copia del gen al que se adjunta información taxonómica.
+
 
 Ejecutar ANVIO7.1 solicitando los recursos y agendando la ejecucion via scripts
 =============================================
