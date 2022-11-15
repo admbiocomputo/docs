@@ -16,7 +16,7 @@ Usted puede ejecutar anvio_7.1  en la Federación de cluster  de dos maneras:
   
 Ejecutar ANVIO en una sesion Interactiva vía SRUN
 ================================
-Este procedimiento no requiere de agendamiento para reservar los recursos con los que ejecutara los procesos;  Siempre y cuando esten disponibles y su programa no requiera mas de tres(3) horas reloj pared -- `wall-clock <https://en.wikipedia.org/wiki/Elapsed_real_time#:~:text=Elapsed%20real%20time%2C%20real%20time,at%20which%20the%20task%20started.>`_  -- de procesamiento; se ejecutará inmediatamente.
+Este procedimiento no requiere de agendamiento para reservar los recursos con los que ejecutará los procesos;  Siempre y cuando esten disponibles y su programa no requiera mas de tres(3) horas reloj pared -- `wall-clock <https://en.wikipedia.org/wiki/Elapsed_real_time#:~:text=Elapsed%20real%20time%2C%20real%20time,at%20which%20the%20task%20started.>`_  -- de procesamiento; se ejecutará inmediatamente.
 
 Luego de conectarse con una sesion ssh en el nodo de logeo del cluster biocomputo o usando el nodo de logeo de la Federación de clusters, debe solicitar los recursos en una sesion interactiva usando el commando SRUN.
 
@@ -28,7 +28,7 @@ Si usted se **accedio al nodo de envio de un cluster asociado **,  los recursos 
  
  srun -p cpu.normal.q --pty /bin/bash -i
  
-Para usar el software ANVIO7.1 desde el container, deberá informar a  singularity los directorios a los que  requiere tener acceso; la variable *SINGULARITY_BINDPATH*  almacena estas rutas(path). 
+Para usar el software ANVIO7.1 desde el container, deberá informar a  *singularity* los directorios a los que  requiere tener acceso; la variable *SINGULARITY_BINDPATH*  almacena estas rutas(path). 
 
 Si usa bash puede hacerlo así::
 
@@ -45,11 +45,11 @@ Tutorial con Anvio7.1 en el Cluster biocomputo
 
 El tutorial sigue lo propuesto por  ANVIO  en:  *https://merenlab.org/tutorials/read-recruitment/*
 
-Los datos usado son obtenidos de simulaciones e incluyen una secuencia Referencia y lecturas cortas que, es lo habitual en este tipo de analisis.
+Los datos usado son obtenidos de simulaciones e incluyen una secuencia Referencia y lecturas cortas que, es lo habitual en este tipo de análisis.
 
 El objetivo principal del análisis  es identificar  y clasificar las secuencias presentes en las lecturas cortas  de una muestra de la que se tiene  una secuencia referencia. 
 
-El conjunto de secuencias referencia son un FASTA, pueden representar uno o más segmentos contiguos de ADN (contigs) que, podrian pertenecer a uno o varios genomas y abarcan genes, genomas ensamblados en metagenomas parciales o completos, genomas amplificados individualmente, genomas aislados, genomas virales o plásmidos: Una secuencia  más larga que las lecturas cortas a usar sirve como referencia.
+El conjunto de secuencias referencia son un FASTA y pueden representar uno o más segmentos contiguos de ADN (contigs) que, podrían pertenecer a uno o varios genomas y abarcan genes, genomas ensamblados en metagenomas parciales o completos, genomas amplificados individualmente, genomas aislados, genomas virales o plásmidos: Una secuencia  más larga que las lecturas cortas a usar sirve como referencia.
 
 El conjunto de lecturas cortas pudo haberse originado en la secuenciación de un solo genoma, un metagenoma completo o incluso amplicones generados con sus primers; no es necesario que sean lecturas cortas, se pueden incluir lecturas largas con sus secuencias de referencia.
 
@@ -58,7 +58,7 @@ Hay mucha libertad para definir el contexto de su secuencia de referencia y lect
 A favor de la simplicidad comenzaremos con un ejemplo sencillo: un solo genoma y un conjunto de metagenomas simulados, ya que el propósito del tutorial es ofrecer una vision práctica para identificar las lecturas, hasta donde  la ciencia lo permite.
 
 Primero vaya al directorio asignado en /scratchsan -no use su $HOME--
-descargue alli las lecturas comprimidas, descomprimalas.  Ingrese al directorio donde expandio las lecturas: Encontrara el archivo genome.fa que es la secuencia referencia y el directorio metagenomes que incluye varios metagenomas simulados; supondremos son metagenomas intestinales de humanos::
+descargue alli las lecturas comprimidas, descomprimalas.  Ingrese al directorio donde expandio las lecturas: Encontrara el archivo genome.fa que es la secuencia referencia y el directorio metagenomes que incluye varios metagenomas simulados; supondremos son metagenomas intestinales  humanos::
  [divanegasa@perseus ~]$ srun -M biocomputo -p cpu.normal.q -w hercules2 --pty /bin/bash -i
  [divanegasa@hercules2 ~]$ cd /scratchsan/acaroq/divanegasa/
  [divanegasa@hercules2 ~]$ curl -L https://figshare.com/ndownloader/files/31180186 -o metagenomic-read-recruitment-data-pack.tar.gz
@@ -66,14 +66,14 @@ descargue alli las lecturas comprimidas, descomprimalas.  Ingrese al directorio 
  [divanegasa@hercules2 ~]$ cd metagenomic-read-recruitment-data-pack
 
  
-Preparacion de las lecturas
+Preparación de las lecturas
 ---------------------------
-Para trabajar con las lecturas se requiere ingresar al container y usar el software ANVIO7.1 sobre los datos descargados y expandidos en el anterior procedimiento.  Primero, construiremos una una base de datos con el genoma referencia para sobre ella realizar una anotacion funcional de los genes: identificandolos y usando solo una sola copia del gen al que se adjunta información taxonómica::
+Para trabajar con las lecturas se requiere ingresar al container y usar el software ANVIO7.1 sobre los datos descargados y expandidos en el anterior procedimiento.  Primero, construiremos una una base de datos con el genoma referencia para sobre ella realizar una anotación funcional de los genes: identificandolos y usando solo una sola copia del gen a la que se adjunta información taxonómica::
 
  [divanegasa@hercules2 ~]$ export SINGULARITY_BINDPATH="/scratchsan:/scratchsan"
  [divanegasa@hercules2 ~]$ singularity shell /localapps/anvio_7.1_main_0522.sif
   
-Se requiere construir una base de datos con el genoma referencia para sobre ella realizar una anotacion funcional de los genes: identificandolos y usando solo una sola copia del gen al que se adjunta información taxonómica::
+Se requiere construir una base de datos con el genoma referencia para sobre ella realizar una anotación funcional de los genes: identificándolos y usando solo una sola copia del gen al que se adjunta información taxonómica::
 
  Singularity> cd /scratchsan/acaroq/divanegasa/
  Singularity> cd metagenomic-read-recruitment-data-pack
@@ -82,8 +82,7 @@ Se requiere construir una base de datos con el genoma referencia para sobre ella
  Singularity> anvi-run-hmms -c genome.db
  Singularity> anvi-run-scg-taxonomy -c genome.db --num-threads 4
  
-Una segunda base de datos con el genoma referencia sera contruida con bowtie2 para realizar el mapeo de las lecturas y obtener los alineamientos en un archivo SAM. luego ahorrar espacio transformandolo a BAM indexado y ordenado en donde los alineamientos sran perfilados y visualizados con ANVIO
-
+Una segunda base de datos con el genoma referencia será contruida con bowtie2 para realizar el mapeo de las lecturas y obtener los alineamientos en un archivo SAM. luego será formateado  a BAM, indexado y ordenado;  los alineamientos del archivo BAM seran perfilados y visualizados con ANVIO::
 
  Singularity> bowtie2-build genome.fa genome
  Singularity> bowtie2 -x genome -1 metagenomes/magdalena-R1.fastq -2 metagenomes/magdalena-R2.fastq -S magdalena.sam
@@ -92,7 +91,7 @@ Una segunda base de datos con el genoma referencia sera contruida con bowtie2 pa
  Singularity> samtools index magdalena.bam
  Singularity> anvi-profile -i magdalena.bam -c genome.db -o magdalena-profile --cluster
 
-Los resultados los puede visualizar en un navegador con la URL  http://0.0.0.0:8080 del nodo donde realiza los calculos.
+Los resultados finales los puede ver en un navegador con la URL  http://0.0.0.0:8080 en el nodo donde realiza los calculos por lo que, debe iniciar unasesion grafica con *srun*.
 
 Ejecutar ANVIO7.1 solicitando los recursos y agendando la ejecucion via scripts
 =============================================
@@ -100,9 +99,9 @@ En la federacion de Cluster del CECC los recursos son aportados por los cluster 
 
 Crear un script para correr ANVIO7.1
 ----------------------------------------
-Para enviar su trabajo puede hacer un script de shell con algunas directivas que especifican la cantidad de CPU, memoria, tiempo a usar, numero de modos, etc., que el sistema interpretará al enviarlo con el comando sbatch.
+Para enviar su trabajo puede hacer un script de shell con algunas directivas que especifican la cantidad de CPU, memoria, tiempo a usar, número de nodos, etc., que el sistema interpretará al enviarlo con el comando *sbatch*.
 
-Para ejecutar Anvio7.1 el script *run_anvio.sh*  podria contener::
+Para ejecutar Anvio7.1 el script *run_anvio.sh*  podría contener::
   
  #!/bin/bash -l
  #SBATCH --job-name=anvio      #Nombre del Trabajo
@@ -118,10 +117,10 @@ Para ejecutar Anvio7.1 el script *run_anvio.sh*  podria contener::
  #SBATCH --mail-user=test@unal.edu.co  #El correo donde se enviaran notificaciones cuando inicie y finalice el trabajo.
 
        unset SINGULARITY_BINDPATH  #remuevo atributos y valores de la variable *SINGULARITY_BINDPATH*
-       export SINGULARITY_BINDPATH="/scratchsan:/scratchsan"  #Permite acceso al directorio /scratchsan vinculandolo al directorio /scratchsan  dent$
+       export SINGULARITY_BINDPATH="/scratchsan:/scratchsan"  #Permite acceso al directorio /scratchsan vinculándolo al directorio /scratchsan  dent$
        singularity exec  /localapps/anvio_7.1_main_0522.sif /bin/sh script.sh  #Desde el container, ejecuto el contenido del  script script.sh
    
-El contenido de script.sh puede incluir la mayoria de las lineas ejecutadas de modo iteractivo::
+El contenido de script.sh puede incluir la mayoría de las lineas ejecutadas de modo iteractivo::
 
  #!/bin/bash
  cd /scratchsan/acaroq/divanegasa/
@@ -137,11 +136,11 @@ El contenido de script.sh puede incluir la mayoria de las lineas ejecutadas de m
  samtools index magdalena.bam
  anvi-profile -i magdalena.bam -c genome.db -o magdalena-profile --cluster
 
-Después puede agendar su ejecucion  con::
+Después puede agendar su ejecución  con::
 
  sbatch -M biocomputo run_anvio.sh
 
-Los resultados los puede visualizar en un navegador con la URL  "http://0.0.0.0:8080" del nodo donde realiza los calculos.
+Los resultados los puede visualizar en un navegador con la URL  "http://0.0.0.0:8080" del nodo donde realiza los calculos por lo que, debe iniciar unasesion grafica con *srun*.
 
 
 
