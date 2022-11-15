@@ -73,45 +73,75 @@ Para trabajar con las lecturas se requiere ingresar al container y usar el softw
   
 Se requiere construir una base de datos con el genoma referencia para sobre ella realizar una anotacion funcional de los genes: identificandolos y usando solo una sola copia del gen al que se adjunta información taxonómica::
 
- [divanegasa@hercules2 ~]$ anvi-gen-contigs-database -f genome.fa -o genome.db
+ Singularity> cd /scratchsan/acaroq/divanegasa/
+ Singularity> cd metagenomic-read-recruitment-data-pack
+ Singularity> anvi-gen-contigs-database -f genome.fa -o genome.db
+ Singularity> anvi-run-ncbi-cogs -c genome.db --num-threads 4
+ Singularity> anvi-run-hmms -c genome.db
+ Singularity> anvi-run-scg-taxonomy -c genome.db --num-threads 4
+ 
+Una segunda base de datos con el genoma referencia sera contruida con bowtie2 para realizar el mapeo de las lecturas y obtener los alineamientos en un archivo SAM. luego ahorrar espacio transformandolo a BAM indexado y ordenado en donde los alineamientos sran perfilados y visualizados con ANVIO
 
+
+ Singularity> bowtie2-build genome.fa genome
+ Singularity> bowtie2 -x genome -1 metagenomes/magdalena-R1.fastq -2 metagenomes/magdalena-R2.fastq -S magdalena.sam
+ Singularity> samtools view -F 4 -bS magdalena.sam -o magdalena-RAW.bam
+ Singularity> samtools sort magdalena-RAW.bam -o magdalena.bam
+ Singularity> samtools index magdalena.bam
+ Singularity> anvi-profile -i magdalena.bam -c genome.db -o magdalena-profile --cluster
+
+Los resultados los puede visualizar en un navegador con la URL  http://0.0.0.0:8080 del nodo donde realiza los calculos.
 
 Ejecutar ANVIO7.1 solicitando los recursos y agendando la ejecucion via scripts
 =============================================
 En la federacion de Cluster del CECC los recursos son aportados por los cluster asociados y se comparten  entre los usuarios,  para garantizar un uso justo, todos deben realizar el envio de trabajos a través del sistema por lotes que ejecutará las aplicaciones en los recursos disponibles.
 
-Crear un script para correr gaussian16
+Crear un script para correr ANVIO7.1
 ----------------------------------------
-Un script para enviar su trabajo es un script de shell con algunas directivas que especifican la cantidad de CPU, memoria, tiempo a usar, numero de modos, etc., que el sistema interpretará al enviarlo con el comando sbatch.
+Para enviar su trabajo puede hacer un script de shell con algunas directivas que especifican la cantidad de CPU, memoria, tiempo a usar, numero de modos, etc., que el sistema interpretará al enviarlo con el comando sbatch.
 
-Para ejecutar gaussian el script *run_gaussian.sh*  podria contener::
+Para ejecutar gaussian el script *run_anvio.sh*  podria contener::
   
-  #!/bin/bash	#El interprete que su script usa
-  #SBATCH --job-name=gauss16	#Nombre del Trabajo
-  #SBATCH -n 4	#solicita reservar  4 Core de CPU
-  #SBATCH -N 1	#solicita asignar un(1) nodo de computo donde esten disponibles 4 cores(linea anterior).
-  #SBATCH -t 0-00:30	#Su trabajo se ejecutara por 30 minutos, luego se eliminara; aun si no se completa.
-  #SBATCH -p debug	#Esta linea indica la particion de la cual se seleccionara los nodos requeridos.
-  #SBATCH --mem-per-cpu=4000	#Usted reservara 4G de memoria RAM por Tarea o Core de CPU.
-  #SBATCH -o output_%j.txt	#La salida de su trabajo sera redireccionada al archivo output_*JOBID*.txt
-  #SBATCH -e error_%j.txt 	#La salida de errores de su trabajo sera redireccionada al archivo  error_JOBID.txt
-  #SBATCH --mail-type=BEGIN,END	#Se enviara un e-mail cuando Inicie y finalice su trabajo.
-  #SBATCH --mail-user=test@unal.edu.co	#El correo donde se enviaran notificaciones cuando inicie y finalice el trabajo.
-        
-       unset SINGULARITY_BINDPATH  #remuevo atributos y valores de la variable *SINGULARITY_BINDPATH*
-       export SINGULARITY_BINDPATH="/homes:/homes"  #Permite acceso al directorio /homes vinculandolo al directorio /homes  dentro del container.
-       *singularity exec /localapps/centos7.gaussian16.sif  /bin/sh script.sh* #Desde el container, ejecuto el contenido del  script *script.sh*
+ #!/bin/bash -l
+ #SBATCH --job-name=anvio      #Nombre del Trabajo
+ #SBATCH -n 4  #solicita reservar  4 Core de CPU  
+ #SBATCH -N 1  #solicita asignar un(1) nodo de computo donde esten disponibles 4 cores(linea anterior).
+ #SBATCH -w hercules2 #El nodo que reserva para realizar su trabajo
+ #SBATCH -t 0-00:60    #Su trabajo se ejecutara por 60 minutos, luego se eliminara; aun si no se completa.
+ #SBATCH -p cpu.normal.q     #Esta linea indica la particion de la cual se seleccionara los nodos requeridos.
+ #SBATCH --mem-per-cpu=4000    #Usted reservara 4G de memoria RAM por Tarea o Core de CPU.
+ #SBATCH -o anvio_%j.out      #La salida de su trabajo sera redireccionada al archivo output_*JOBID*.txt
+ #SBATCH -e anvio_%j.err       #La salida de errores de su trabajo sera redireccionada al archivo  error_JOBID.txt
+ #SBATCH --mail-type=BEGIN,END #Se enviara un e-mail cuando Inicie y finalice su trabajo.
+ #SBATCH --mail-user=test@unal.edu.co  #El correo donde se enviaran notificaciones cuando inicie y finalice el trabajo.
 
-El contenido de *script.sh* es::
+       unset SINGULARITY_BINDPATH  #remuevo atributos y valores de la variable *SINGULARITY_BINDPATH*
+       export SINGULARITY_BINDPATH="/scratchsan:/scratchsan"  #Permite acceso al directorio /scratchsan vinculandolo al directorio /scratchsan  dent$
+       singularity exec  /localapps/anvio_7.1_main_0522.sif /bin/sh script.sh  #Desde el container, ejecuto el contenido del  script script.sh
+   
+   
+El contenido de script.sh puede incluir la mayoria de las lineas ejecutadas de modo iteractivo::
 
 	#!/bin/bash
-   		export GAUSS_SCRDIR="/home/qteorica/scratchsan/"
-        		g16 < test0001.com >test0001.com.out
+	cd /scratchsan/acaroq/divanegasa/
+        cd metagenomic-read-recruitment-data-pack
+          anvi-gen-contigs-database -f genome.fa -o genome.db
+          anvi-run-ncbi-cogs -c genome.db --num-threads 4
+          anvi-run-hmms -c genome.db
+          anvi-run-scg-taxonomy -c genome.db --num-threads 4
+             bowtie2-build genome.fa genome
+             bowtie2 -x genome -1 metagenomes/magdalena-R1.fastq -2 metagenomes/magdalena-R2.fastq -S magdalena.sam
+             samtools view -F 4 -bS magdalena.sam -o magdalena-RAW.bam
+             samtools sort magdalena-RAW.bam -o magdalena.bam
+             samtools index magdalena.bam
+          anvi-profile -i magdalena.bam -c genome.db -o magdalena-profile --cluster
+
+
 
 Después puede agendar su ejecucion  con::
-	*sbatch -M qteorica run_gaussian.sh*
+	sbatch -M biocomputo run_anvio.sh
 
-
+Los resultados los puede visualizar en un navegador con la URL  http://0.0.0.0:8080 del nodo donde realiza los calculos.
 
 
 
