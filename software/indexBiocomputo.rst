@@ -1,28 +1,28 @@
 
 
-**Cluster Biologia Computacional**
+**Cluster Biología Computacional**
 ***********************************
 
 Anvio7.1
 ====
-`ANVIO <https://anvio.org/>`_  es una plataforma de software que usa estrategias computacionales extendidas a la microbiología junto a datos obtenidos de areas como la genómica, metagenómica, metatranscriptómica, pangenómica, metapangenómica, filogenómica y la genética de poblaciones microbianas en una manera integrada y fácil de usar a través de capacidades de visualización interactiva.
+`ANVIO <https://anvio.org/>`_  es una plataforma de software que usa estrategias computacionales extendidas a la microbiología usando datos  de areas como la genómica, metagenómica, metatranscriptómica, pangenómica, metapangenómica, filogenómica y la genética de poblaciones microbianas en una manera integrada y fácil de usar a través de capacidades de visualización interactiva.
 
 .. note:: El container con ANVIO7.1 esta en: **/localapps/anvio_7.1_main_0522.sif** .
 
-Usted puede ejecutar anvio_7.1  en la Federacion de cluster  de dos maneras:
+Usted puede ejecutar anvio_7.1  en la Federación de cluster  de dos maneras:
 
 1.  En una sesion iteractiva donde los resultados se esperan en tiempos no mayores a tres(3) horas y, 
-2. mediante el envio de scripts donde se agenda su trabajo para ser  ejecutado; normalmente son trabajos que reservan y usan los recursos entre 8 horas hasta 15 dias o lo asignado al  proyecto del usuario.
+2. mediante el envío de scripts donde se agenda su trabajo para ser  ejecutado; normalmente son trabajos que reservan y usan los recursos entre 8 horas hasta 15 días o lo asignado al  proyecto del usuario.
   
-Ejecutar ANVIO en una sesion Interactiva via SRUN
+Ejecutar ANVIO en una sesion Interactiva vía SRUN
 ================================
-Este procedimiento no requiere de agendamiento para reservar los recursos con los que ejecutara los procesos;  Siempre y cuando esten disponibles y su programa no requiera mas de tres(3) horas reloj pared -- `wall-clock <https://en.wikipedia.org/wiki/Elapsed_real_time#:~:text=Elapsed%20real%20time%2C%20real%20time,at%20which%20the%20task%20started.>`_  -- de procesamiento; se ejecutara inmediatamente.
+Este procedimiento no requiere de agendamiento para reservar los recursos con los que ejecutara los procesos;  Siempre y cuando esten disponibles y su programa no requiera mas de tres(3) horas reloj pared -- `wall-clock <https://en.wikipedia.org/wiki/Elapsed_real_time#:~:text=Elapsed%20real%20time%2C%20real%20time,at%20which%20the%20task%20started.>`_  -- de procesamiento; se ejecutará inmediatamente.
 
-Luego de conectarse con una sesion ssh en el nodo de logeo del cluster biocomputo o usando el nodo de logeo de la Federacion de clusters, debe solicitar los recursos en una sesion interactiva usando el commando SRUN.
+Luego de conectarse con una sesion ssh en el nodo de logeo del cluster biocomputo o usando el nodo de logeo de la Federación de clusters, debe solicitar los recursos en una sesion interactiva usando el commando SRUN.
 
-**Si inicia sesion desde el nodo de la federacion** debe adicionar el parametro -M *NombreCluster*, tambien deberia adicionar el parametro que indica el grupo de nodos --o particion-- a los que va acceder con -p *NombreParticion*.  En el ejemplo que sigue se reserva todos los recursos de un(1) nodo del grupo o particion "cpu.normal.q",  en el cluster "biocomputo" asi::
+**Si inicia sesion desde el nodo de la federación** debe adicionar el parámetro -M *NombreCluster*, tambíen debería adicionar el parametro que indica el grupo de nodos --o partición-- a los que va acceder con -p *NombreParticion*.  En el ejemplo que sigue se reservan todos los recursos de un(1) nodo del grupo o partición "cpu.normal.q",  en el cluster "biocomputo" asi::
 
- *srun -M biocomputo -p cpu.normal.q --pty /bin/bash -i*
+ srun -M biocomputo -p cpu.normal.q --pty /bin/bash -i
  
 Si usted se **accedio a un cluster asociado **,  los recursos se reservan en el cluster al que pertenece el nodo donde ingresa:: 
  
