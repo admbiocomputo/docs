@@ -103,7 +103,7 @@ Crear un script para correr ANVIO7.1
 ----------------------------------------
 Para enviar su trabajo puede hacer un script de shell con algunas directivas que especifican la cantidad de CPU, memoria, tiempo a usar, numero de modos, etc., que el sistema interpretará al enviarlo con el comando sbatch.
 
-Para ejecutar gaussian el script *run_anvio.sh*  podria contener::
+Para ejecutar Anvio7.1 el script *run_anvio.sh*  podria contener::
   
  #!/bin/bash -l
  #SBATCH --job-name=anvio      #Nombre del Trabajo
