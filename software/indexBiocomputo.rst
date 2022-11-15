@@ -1,7 +1,10 @@
 
 
-**ANVIO 7.1**
-*********
+**Cluster Biologia Computacional**
+***********************************
+
+Anvio7.1
+====
 `ANVIO <https://anvio.org/>`_  es una plataforma de software que usa estrategias computacionales extendidas a la microbiología junto a datos obtenidos de areas como la genómica, metagenómica, metatranscriptómica, pangenómica, metapangenómica, filogenómica y la genética de poblaciones microbianas en una manera integrada y fácil de usar a través de capacidades de visualización interactiva.
 
 .. note:: El container con ANVIO7.1 esta en: **/localapps/anvio_7.1_main_0522.sif** .
@@ -121,9 +124,8 @@ Para ejecutar gaussian el script *run_anvio.sh*  podria contener::
    
    
 El contenido de script.sh puede incluir la mayoria de las lineas ejecutadas de modo iteractivo::
-
-	#!/bin/bash
-	cd /scratchsan/acaroq/divanegasa/
+ #!/bin/bash
+        cd /scratchsan/acaroq/divanegasa/
         cd metagenomic-read-recruitment-data-pack
           anvi-gen-contigs-database -f genome.fa -o genome.db
           anvi-run-ncbi-cogs -c genome.db --num-threads 4
@@ -134,8 +136,7 @@ El contenido de script.sh puede incluir la mayoria de las lineas ejecutadas de m
              samtools view -F 4 -bS magdalena.sam -o magdalena-RAW.bam
              samtools sort magdalena-RAW.bam -o magdalena.bam
              samtools index magdalena.bam
-          anvi-profile -i magdalena.bam -c genome.db -o magdalena-profile --cluster
-
+             anvi-profile -i magdalena.bam -c genome.db -o magdalena-profile --cluster
 
 
 Después puede agendar su ejecucion  con::
