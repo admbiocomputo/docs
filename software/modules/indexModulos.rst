@@ -1,5 +1,4 @@
-.. _indexmodules
-
+.. _indexModulos
 ## Systema de Modulos
 
 La Federacion de clusters del CECC usa un sistema de modulos para acceder a la mayoria del software:  La mayoria del software no se encuentra por omision  en el sistema operativo, debe ser accediso o cargado en el.  Esto permite a los usuarios tener varias versiones del software de manera concurrente o permitir cambiar entre ellas de modo facil.
