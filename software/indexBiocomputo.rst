@@ -125,24 +125,24 @@ Para ejecutar Anvio7.1 el script *run_anvio.sh*  podria contener::
    
 El contenido de script.sh puede incluir la mayoria de las lineas ejecutadas de modo iteractivo::
  #!/bin/bash
-        cd /scratchsan/acaroq/divanegasa/
-        cd metagenomic-read-recruitment-data-pack
-          anvi-gen-contigs-database -f genome.fa -o genome.db
-          anvi-run-ncbi-cogs -c genome.db --num-threads 4
-          anvi-run-hmms -c genome.db
-          anvi-run-scg-taxonomy -c genome.db --num-threads 4
-             bowtie2-build genome.fa genome
-             bowtie2 -x genome -1 metagenomes/magdalena-R1.fastq -2 metagenomes/magdalena-R2.fastq -S magdalena.sam
-             samtools view -F 4 -bS magdalena.sam -o magdalena-RAW.bam
-             samtools sort magdalena-RAW.bam -o magdalena.bam
-             samtools index magdalena.bam
-             anvi-profile -i magdalena.bam -c genome.db -o magdalena-profile --cluster
+ cd /scratchsan/acaroq/divanegasa/
+ cd metagenomic-read-recruitment-data-pack
+ anvi-gen-contigs-database -f genome.fa -o genome.db
+ anvi-run-ncbi-cogs -c genome.db --num-threads 4
+ anvi-run-hmms -c genome.db
+ anvi-run-scg-taxonomy -c genome.db --num-threads 4
+ bowtie2-build genome.fa genome
+ bowtie2 -x genome -1 metagenomes/magdalena-R1.fastq -2 metagenomes/magdalena-R2.fastq -S magdalena.sam
+ samtools view -F 4 -bS magdalena.sam -o magdalena-RAW.bam
+ samtools sort magdalena-RAW.bam -o magdalena.bam
+ samtools index magdalena.bam
+ anvi-profile -i magdalena.bam -c genome.db -o magdalena-profile --cluster
 
 
 Después puede agendar su ejecucion  con::
-	sbatch -M biocomputo run_anvio.sh
+ sbatch -M biocomputo run_anvio.sh
 
-Los resultados los puede visualizar en un navegador con la URL  http://0.0.0.0:8080 del nodo donde realiza los calculos.
+Los resultados los puede visualizar en un navegador con la URL  "http://0.0.0.0:8080" del nodo donde realiza los calculos.
 
 
 
