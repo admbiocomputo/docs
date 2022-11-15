@@ -24,13 +24,13 @@ Luego de conectarse con una sesion ssh en el nodo de logeo del cluster biocomput
 
  srun -M biocomputo -p cpu.normal.q --pty /bin/bash -i
  
-Si usted se **accedio a un cluster asociado **,  los recursos se reservan en el cluster al que pertenece el nodo donde ingresa:: 
+Si usted se **accedio al nodo de envio de un cluster asociado **,  los recursos se reservan en el cluster al que pertenece el nodo donde ingresa:: 
  
  srun -p cpu.normal.q --pty /bin/bash -i
  
-Para usar el software ANVIO7.1 desde el container, debera informar a  singularity los directorios a los que  requiere tener acceso; la variable *SINGULARITY_BINDPATH*  almacena estas rutas(path). 
+Para usar el software ANVIO7.1 desde el container, deberá informar a  singularity los directorios a los que  requiere tener acceso; la variable *SINGULARITY_BINDPATH*  almacena estas rutas(path). 
 
-Si usa bash puede hacerlo asi::
+Si usa bash puede hacerlo así::
 
   export  SINGULARITY_BINDPATH="/scratchsan/acaroq/divanegasa"
 
@@ -43,8 +43,7 @@ El cambio en el prompt  a "Singularity>" indica que  ingreso al container
 Tutorial con Anvio7.1 en el Cluster biocomputo
 -----------------------------------------
 
-El tutorial sigue lo propuesto por  ANVIO  en:
- *https://merenlab.org/tutorials/read-recruitment/*
+El tutorial sigue lo propuesto por  ANVIO  en:  *https://merenlab.org/tutorials/read-recruitment/*
 
 Los datos usado son obtenidos de simulaciones e incluyen una secuencia Referencia y lecturas cortas que, es lo habitual en este tipo de analisis.
 
