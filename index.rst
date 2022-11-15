@@ -27,7 +27,7 @@ El Director del grupo de Investigacion de la Universidad Nacional de Colombia ap
   ingreso.rst
   asociados/index.rst
   software/index.rst
-  software/modules/indexModulos.rst
+  software/modules/index.rst
   software/indexBiocomputo.rst
   software/indexQteorica.rst
   uso/index.rst
