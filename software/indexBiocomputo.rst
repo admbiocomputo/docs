@@ -122,8 +122,8 @@ Para ejecutar Anvio7.1 el script *run_anvio.sh*  podria contener::
        export SINGULARITY_BINDPATH="/scratchsan:/scratchsan"  #Permite acceso al directorio /scratchsan vinculandolo al directorio /scratchsan  dent$
        singularity exec  /localapps/anvio_7.1_main_0522.sif /bin/sh script.sh  #Desde el container, ejecuto el contenido del  script script.sh
    
-   
 El contenido de script.sh puede incluir la mayoria de las lineas ejecutadas de modo iteractivo::
+
  #!/bin/bash
  cd /scratchsan/acaroq/divanegasa/
  cd metagenomic-read-recruitment-data-pack
@@ -138,8 +138,8 @@ El contenido de script.sh puede incluir la mayoria de las lineas ejecutadas de m
  samtools index magdalena.bam
  anvi-profile -i magdalena.bam -c genome.db -o magdalena-profile --cluster
 
-
 Después puede agendar su ejecucion  con::
+
  sbatch -M biocomputo run_anvio.sh
 
 Los resultados los puede visualizar en un navegador con la URL  "http://0.0.0.0:8080" del nodo donde realiza los calculos.
