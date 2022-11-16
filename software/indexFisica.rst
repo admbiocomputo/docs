@@ -6,12 +6,12 @@ Cluster Físcia teorica
 
 `Python <https://www.python.org/about/>` es un lenguaje de programación de alto nivel comunmente usado por su sintaxis facil de entender y la gran cantidad de modulos disponibles (como por ejemplo NumPy o TensorFlow)
 
-Para usar Python en el cluster, lo más aconsejable es crear un entorno virtual usando `Anaconda <https://www.anaconda.com//>`, de esta manera el ususrario tendra control sobre la versión de python y podrá instalar las librerías que necesite. 
+Para usar Python en el cluster, lo más aconsejable es crear un entorno virtual usando `Anaconda <https://www.anaconda.com//>`, de esta manera el usuarario tendrá control sobre la versión de Python y podrá instalar las librerías que necesite. 
 
 Uso de Conda
 ================================
 
-Para crear un entorno virtual de Python primero debemos cargar el modulo de Anaconda y luego creamos el entorno virtual, para ello ejecutamos la siguiente siguiente serie de comandos (para usar python 2 cargue Anaconda2 y para usar python 3 cargue Anaconda3)::
+Para crear un entorno virtual de Python primero debemos cargar el módulo Anaconda y luego creamos el entorno virtual, para ello ejecutamos la siguiente siguiente serie de comandos (para usar python 2 cargue Anaconda2 y para usar python 3 cargue Anaconda3)::
  
  [dgarzona@hercules8 ~]$ module avai
  [dgarzona@hercules8 ~]$ module load envs/anaconda3
@@ -34,7 +34,7 @@ Ejecutar Python en una sesion Interactiva vía SRUN
 
 Este procedimiento no requiere de agendamiento para reservar los recursos con los que ejecutará los procesos;  Siempre y cuando esten disponibles y su programa no requiera mas de tres(3) horas reloj pared -- `wall-clock <https://en.wikipedia.org/wiki/Elapsed_real_time#:~:text=Elapsed%20real%20time%2C%20real%20time,at%20which%20the%20task%20started.>`_  -- de procesamiento; se ejecutará inmediatamente.
 
-Luego de conectarse con una sesion ssh en el nodo de logeo del cluster biocomputo o usando el nodo de logeo de la Federación de clusters, debe solicitar los recursos en una sesion interactiva usando el commando SRUN.::
+Luego de conectarse con una sesion ssh en el nodo de logueo del cluster biocomputo o usando el nodo de logueo de la Federación de clusters, debe solicitar los recursos en una sesion interactiva usando el commando SRUN.::
 
 Para ello debe ejecutar el siguiente comando:
  [dgarzona@hercules6]$ srun -p cpu.HigMem.q* --pty /bin/bash -i
