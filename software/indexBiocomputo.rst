@@ -144,4 +144,16 @@ Los resultados los puede visualizar en un navegador con la URL  "http://0.0.0.0:
 
 
 
+CD-HIT
+*****
+
+"CD-HIT" es un software para agrupamiento(clustering)  y comparación de secuencias de proteinas o nucléotidos. 
+
+Para usar CD-HIT,  usted debe cargar el modulo con::
+ module load 
+
+
+
+
+
 
