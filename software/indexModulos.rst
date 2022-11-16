@@ -2,7 +2,7 @@
 **Sistema de Modulos**
 ****************
 
-La mayoria del software no se encuentra en el sistema operativo las rutinas que logran ubicar el software y sus dependencias son gestionadas por los módulos que permiten tener varias versiones de manera concurrente o permitir cambiar entre ellas de modo facil.
+La mayoria del software no se encuentra en el sistema operativo las rutinas que logran ubicar el software y sus dependencias son gestionadas por los módulos que permiten disponer del software, tener varias versiones de manera concurrente o permitir cambiar entre ellas de modo facil.
 
 
 Comando `module`
@@ -12,13 +12,11 @@ Los modulos  pueden ser llamados por los scripts con los que se envia un trabajo
 
 Para ver los modulos disponible ejecute en una terminal o consola:
 
-``
+```
 module avail
-``
+```
 
-Esto retornara una lista de modulos que puede carga en su ambiente.
-
-Para cargar el modulo que eligio en su ambiente ejecute:
+Esto retornara una lista de los modulos que estan disponible para usar en su sesion; Para cargar el modulo que eligio en su ambiente ejecute:
 
 ```bash
 module load some_module
