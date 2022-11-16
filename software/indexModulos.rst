@@ -2,7 +2,7 @@
 **Sistema de Modulos**
 ****************
 
-La mayoria del software no se encuentra en el sistema operativo las rutinas que logran ubicar el software y sus dependencias son gestionadas por los módulos que permiten disponer del software, tener varias versiones de manera concurrente o permitir cambiar entre ellas de modo facil.
+La mayoria del software no se encuentra en el sistema operativo las rutinas que logran ubicar el software y sus dependencias son gestionadas por los módulos que permiten acceder al software, tener varias versiones de manera concurrente o permitir cambiar entre ellas de modo facil.
 
 
 Comando `module`
@@ -16,67 +16,28 @@ Para ver los modulos disponible ejecute en una terminal o consola:
 module avail
 ```
 
-Esto retornara una lista de los modulos que estan disponible para usar en su sesion; Para cargar el modulo que eligio en su ambiente ejecute:
-
-```bash
+Esto retornara una lista de los modulos que estan disponible para usar en su sesion; Para cargar el modulo que eligio en su ambiente ejecute::
  module load some_module
+ # example: "module load apps/cdhit/4.8.1"
 
- # ej: "module load python"
-```
 
-You can specify the version of the software by appending a `/` with
-the version number:
+Usando Modulos en un script de trabajo
+######################
 
-```bash
-module load some_module/version 
-
-# example: "module load python/3.5.1"
-```
-
-The Lmod hierarchical module system provides five layers to support
-programs built with compiler and library consistency requirements. A
-module’s dependencies must be loaded before the module can be loaded.
-
-The Layers include:
-
-+ Independent programs
-+ Compilers
-+ Compiler dependent programs
-+ MPI implementations
-+ MPI dependent programs 
-
-If you cannot load a module because of dependencies, you can use the
-`module spider` to find what dependencies you need to load the module.
+Los modulos en un script SLURM de trabajo pueden ser llamdos luego de las directivas `#SBATCH` y antes de la linea que lo usara, por ejemplo el siguiente script ejecutara un trabajo cargando python y ejecutando python 3.9
 
 ```bash
-module spider some_module
+ #!bin/bash
+ #SBATCH --nodes=1
+ #SBATCH --time=00:01:00
+ #SBATCH --ntasks=1
+ #SBATCH --job-name=test-job
+ #SBATCH --output=test-job.%j.out
 
-# example: "module spider openmpi"
-```
+ module purge
+ module load python/3.5.1
 
-### Loading Modules in a Job Script
-
-Loading a module will enable access to the modules 
-described software package. Additionally, modules 
-will set or modify a user’s environment
-variables.
-
-Modules in a job script can be loaded after your `#SBATCH` directives
-and before your actual executable is called. A sample job script that
-loads Python into the environment is provided below:
-
-```bash
-#!bin/bash
-#SBATCH --nodes=1
-#SBATCH --time=00:01:00
-#SBATCH --ntasks=1
-#SBATCH --job-name=test-job
-#SBATCH --output=test-job.%j.out
-
-module purge
-module load python/3.5.1
-
-python3 test-program.py
+ python3 test-program.py
 ```
 
 ### Subcommands
