@@ -9,10 +9,10 @@ Anvio7.1
 
 .. note:: El container con ANVIO7.1 esta en: **/localapps/anvio_7.1_main_0522.sif** .
 
-Usted puede ejecutar anvio_7.1  en la Federación de cluster  de dos maneras:
+Usted puede ejecutar anvio_7.1  en la Federación de cluster de dos maneras:
 
-1.  En una sesion iteractiva donde los resultados se esperan en tiempos no mayores a tres(3) horas y, 
-2. mediante el envío de scripts donde se agenda su trabajo para ser  ejecutado; normalmente son trabajos que reservan y usan los recursos entre 8 horas hasta 15 días o lo asignado al  proyecto del usuario.
+1. En una sesion iteractiva donde los resultados se esperan en tiempos no mayores a tres(3) horas y, 
+2. Mediante el envío de scripts donde se agenda su trabajo para ser  ejecutado; normalmente son trabajos que reservan y usan los recursos entre 8 horas hasta 15 días o lo asignado al  proyecto del usuario.
   
 Ejecutar ANVIO en una sesion Interactiva vía SRUN
 ================================
