@@ -2,12 +2,11 @@
 **Sistema de Modulos**
 ****************
 
-La Federacion de clusters del CECC usa modulos para acceder al software:  La mayoria del software no se encuentra por omision  en el sistema operativo, las variables que indican las rutas donde se instalan junto a sus dependencias son gestionadas por los modulos.
-
-  .  Esto permite a los usuarios tener varias versiones del software de manera concurrente o permitir cambiar entre ellas de modo facil.
+La mayoria del software no se encuentra en el sistema operativo las rutinas que logran ubicar el software y sus dependencias son gestionadas por los módulos que permiten tener varias versiones de manera concurrente o permitir cambiar entre ellas de modo facil.
 
 
-### Comando `module`
+Comando `module`
+##########
 
 **_los modulos pueden ser usados en scripts de trabajos, trabajos insteractivo o pueden estar cdompilado en nodos especificos.  Los modulos No estan disponibles en el nodo de acceso. 
 
