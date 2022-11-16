@@ -24,9 +24,8 @@ Esto retornara una lista de los modulos que estan disponible para usar en su ses
 Usando Modulos en un script de trabajo
 ######################
 
-Los modulos en un script SLURM de trabajo pueden ser llamdos luego de las directivas `#SBATCH` y antes de la linea que lo usara, por ejemplo el siguiente script ejecutara un trabajo cargando python y ejecutando python 3.9
+Los modulos en un script SLURM de trabajo pueden ser llamdos luego de las directivas `#SBATCH` y antes de la linea que lo usara, por ejemplo el siguiente script ejecutara un trabajo cargando python y ejecutando python 3.9::
 
-```bash
  #!bin/bash
  #SBATCH --nodes=1
  #SBATCH --time=00:01:00
@@ -38,7 +37,6 @@ Los modulos en un script SLURM de trabajo pueden ser llamdos luego de las direct
  module load python/3.5.1
 
  python3 test-program.py
-```
 
 ### Subcommands
 
