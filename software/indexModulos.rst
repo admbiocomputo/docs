@@ -19,9 +19,9 @@ module avail
 Esto retornara una lista de los modulos que estan disponible para usar en su sesion; Para cargar el modulo que eligio en su ambiente ejecute:
 
 ```bash
-module load some_module
+ module load some_module
 
-# ej: "module load python"
+ # ej: "module load python"
 ```
 
 You can specify the version of the software by appending a `/` with
