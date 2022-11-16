@@ -8,13 +8,13 @@ La mayoria del software no se encuentra en el sistema operativo las rutinas que 
 Comando `module`
 ##########
 
-**_los modulos pueden ser usados en scripts de trabajos, trabajos insteractivo o pueden estar cdompilado en nodos especificos.  Los modulos No estan disponibles en el nodo de acceso. 
+Los modulos  pueden ser llamados por los scripts con los que se envia un trabajo o en una sesion iteractiva.  Existen algunos comando que puede usar en los modulos. 
 
 Para ver los modulos disponible ejecute en una terminal o consola:
 
-```
+``
 module avail
-```
+``
 
 Esto retornara una lista de modulos que puede carga en su ambiente.
 
