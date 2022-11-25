@@ -37,6 +37,7 @@ Este procedimiento no requiere de agendamiento para reservar los recursos con lo
 Luego de conectarse con una sesion ssh en el nodo de logueo del cluster biocomputo o usando el nodo de logueo de la Federación de clusters, debe solicitar los recursos en una sesion interactiva usando el commando SRUN.::
 
 Para ello debe ejecutar el siguiente comando:
+
  [dgarzona@hercules6]$ srun -p cpu.HigMem.q* --pty /bin/bash -i
  [dgarzona@hercules6]$ module avai
  [dgarzona@hercules6]$ module load envs/anaconda3
