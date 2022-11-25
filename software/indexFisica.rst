@@ -36,7 +36,7 @@ Este procedimiento no requiere de agendamiento para reservar los recursos con lo
 
 Luego de conectarse con una sesion ssh en el nodo de logueo del cluster biocomputo o usando el nodo de logueo de la Federación de clusters, debe solicitar los recursos en una sesion interactiva usando el commando SRUN.::
 
-Para ello debe ejecutar el siguiente comando:
+Para ello debe ejecutar el siguiente comando::
 
  [dgarzona@hercules6]$ srun -p cpu.HigMem.q* --pty /bin/bash -i
  [dgarzona@hercules6]$ module avai
@@ -44,6 +44,7 @@ Para ello debe ejecutar el siguiente comando:
  (base) [dgarzona@hercules8 ~]$ conda activate my-env
  (my-env) [dgarzona@hercules8 ~]$ cd "ruta de la carpeta con el script"
  (my-env) [dgarzona@hercules8 ~]$ python3 example.py
+
 
 Ejecutar Python solicitando los recursos y agendando la ejecucion via scripts
 =============================================
